@@ -9,14 +9,10 @@ on sysvar sysvar::Engine::EngineStateSwitch
   if(@this) {
 
     $EngineState::EngineSpeed = @sysvar::Engine::EngineSpeedEntry;
-    //$LightState::FlashLight =  @sysvar::Lights::HazardLightsSwitch;
-    $LightState::HeadLight =  @sysvar::Lights::HeadLightsSwitch;
   }
   else
   {
     $EngineState::EngineSpeed = 0;
-    $LightState::FlashLight = 0;
-    $LightState::HeadLight = 0;
   }
 }
 

@@ -5,6 +5,7 @@ variables
   const long kON = 1;
 
   int gDebugCounter = 0;
+  int flag = 0;
 }
 
 on message EngineState 
@@ -49,7 +50,9 @@ on message LightState
 
 SetLightDsp (long headLight, long hazardFlasher)
 {
-  if(headLight == kON) 
+  if(flag==1)
+  {
+      if(headLight == kON) 
   {
     if(hazardFlasher == kON) 
     {
@@ -71,7 +74,24 @@ SetLightDsp (long headLight, long hazardFlasher)
       @sysvar::Lights::LightDisplay = 0; 
     }
   }
+  } else
+  {
+    @sysvar::Lights::LightDisplay = 0;
+  }
+
 }
+
+on sysvar sysvar::Engine::EngineStateSwitch
+{
+  $EngineState::OnOff = @this;
+  if(@this)
+  {
+    flag = 1;
+  } else
+  {
+    flag = 0;
+  }
+}  
 
 on key '0'
 {

@@ -7,6 +7,7 @@ variables
   int gDebugCounterTX = 0;
   int gDebugCounterTXRQ = 0;
   int gDebugCounterRX = 0;
+  int flag = 0;
 }
 
 on start
@@ -63,9 +64,26 @@ on key '1'
   setwriteDbgLevel(1);
 }
 
+on sysvar sysvar::Engine::EngineStateSwitch
+{
+  $EngineState:: OnOff = @this;
+  if(@this)
+  {
+    flag = 1;
+    gHazardLightsStatus = 1;
+    setTimer(tFlashLightFrequency, gFlashLightFrequency);
+  }
+  else
+  {
+    cancelTimer(tFlashLightFrequency);
+    gHazardLightsStatus = 0;
+    flag = 0;
+  }
+}
+
 on sysvar sysvar::Lights::HazardLightsSwitch
 {
-  if (@this)
+  if (@this && flag == 1)
   {
     gHazardLightsStatus = 1;
     setTimer(tFlashLightFrequency, gFlashLightFrequency);
