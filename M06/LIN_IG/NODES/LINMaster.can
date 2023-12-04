@@ -1,0 +1,18 @@
+/*@!Encoding:1252*/
+variables
+{ 
+  dword mNewPage;  //sink identifier
+}
+
+on start
+{
+  //Create a new page at the write window
+  mNewPage = writeCreate("Instructions");
+
+  //get information about the scheduler mode in the write window
+  writeLineEx(mNewPage,2,"The interactive generator can be used to:");
+  writeLineEx(mNewPage,2,"- change the response data (engine_speed, engine_data)");
+  writeLineEx(mNewPage,2,"- send a msg header (engine_ignition)");
+  writeLineEx(mNewPage,2,"\nPush the \"now\" button to send an additional header!");
+}
+

@@ -1,0 +1,145 @@
+/*************************************************************************************/
+
+//                                                                                     
+
+// Description: LIN Description file created using Vector's DaVinci Network Designer   
+
+// Created:     07 Sep 2007 15:12:10
+
+// Author:      Vector Informatik GmbH
+
+// Version:     0.1                                                                    
+
+//                                                                                     
+
+/*************************************************************************************/
+
+LIN_description_file;
+LIN_protocol_version = "2.2";
+LIN_language_version = "2.2";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+  Master: lin_master, 10 ms, 0.1 ms ;
+  Slaves: lin_slave ;
+}
+
+Signals {
+  s_rpm: 8, 0, lin_master, lin_slave ;
+  s_ignition_status: 8, 0, lin_master, lin_slave ;
+  s_speed: 8, 0, lin_master, lin_slave ;
+  s_error: 1, 0, lin_slave, lin_master ;
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  engine_ignition: 34, lin_master, 1 {
+    s_ignition_status, 0 ;
+  }
+  engine_speed: 48, lin_master, 2 {
+    s_speed, 0 ;
+    s_rpm, 8 ;
+  }
+  engine_status: 38, lin_master, 1 {
+    s_ignition_status, 0 ;
+  }
+  check_engine_status: 39, lin_slave, 1 {
+    s_error, 0 ;
+  }
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  lin_slave{
+    LIN_protocol = "2.2" ;
+    configured_NAD = 0x5 ;
+    initial_NAD = 0x5 ;
+    product_id = 0x1E, 0x2, 1 ;
+    response_error = s_error ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      engine_speed ;
+      engine_status ;
+      engine_ignition ;
+      check_engine_status ;
+    }
+  }
+}
+
+Schedule_tables {
+ main_table {
+    engine_speed delay 30 ms ;
+    engine_status delay 30 ms ;
+    check_engine_status delay 30 ms ;
+  }
+ extra_table {
+    engine_ignition delay 10 ms ;
+    check_engine_status delay 10 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  Sine_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  StandardPhys_Sig_Type {
+    physical_value, 0, 0, 1, 0 ;
+  }
+  constant_Signal_Sig_Type {
+    physical_value, 0, 255, 1, 0 ;
+  }
+}
+
+Signal_representation {
+  Sine_Sig_Type: s_speed ;
+  StandardPhys_Sig_Type: s_rpm ;
+  constant_Signal_Sig_Type: s_ignition_status ;
+}
