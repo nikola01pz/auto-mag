@@ -1,7 +1,7 @@
 /*@!Encoding:1252*/
 variables
 {
-  
+  int seatSensorActivated = 0;
 }
 
 on preStart{
@@ -26,9 +26,9 @@ on message Ignition
 
 on sysvar LIN::Seatheating
 {
-  if($Ignition::PowerOn == 1)
+  if($Ignition::PowerOn == 1 && seatSensorActivated == 1)
   {
-    $Heating = @this;
+    $Heating = @this;   
   } else if($Ignition::PowerOn == 0)
   {
     write("First start car, heating not working!");
@@ -41,10 +41,13 @@ on sysvar LIN::SeatSensor
   if($Ignition::PowerOn == 1)
   {
     $Seatsensor = @this;
+    seatSensorActivated = @this;
+    $Heating = @LIN::Seatheating;
   } else if($Ignition::PowerOn == 0)
   {
     write("First start car, seat sensor not working!");
     $Seatsensor = 0;
+    $Heating = 0;
   }
 }
 
@@ -55,6 +58,7 @@ on linFrame Seatsensor
     @LIN::SeatSensor_Dsp = 1;
   } else
   {
+    $Heating = 0;
     @LIN::SeatSensor_Dsp = 0;
   }
 }
@@ -66,5 +70,51 @@ on linFrame GW_Ignition
     @LIN::Seatheating = 0;
     @LIN::SeatSensor = 0;
   }
+}
+
+on sysvar LIN::Seat_up
+{
+  $Seatsetting::Seat_up = @this;
+}
+
+on sysvar LIN::Seat_down
+{
+  $Seatsetting::Seat_down = @this;
+}
+
+on sysvar LIN::Seat_back
+{
+  $Seatsetting::Seat_back = @this;
+}
+
+on sysvar LIN::Seat_forward
+{
+  $Seatsetting::Seat_forward = @this;
+}
+
+on sysvar LIN::Seatback_back
+{
+  $Seatsetting::Seatback_back = @this;
+}
+
+on sysvar LIN::Seatback_forward
+{
+  $Seatsetting::Seatback_forward = @this;
+}
+
+on sysvar LIN::Head_up
+{
+  $Seatsetting::Head_up = @this;
+}
+
+on sysvar LIN::Head_down
+{
+  $Seatsetting::Head_down = @this;
+}
+
+on message Driver_ID
+{
+  $StoreSeatposition::Storeposition = this.StoreSeatposition;
+  $Seatposition::Driver = this.Driver;
 }
 
