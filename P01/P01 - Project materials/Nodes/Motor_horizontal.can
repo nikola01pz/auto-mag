@@ -71,3 +71,14 @@ on linFrame StoreSeatposition
       gStoredPosition[gDriverID] = gCurrentPosition;
 }
 
+on sysvar LIN::Seat_back
+{
+  $Seatsetting::Seat_back = @this;
+}
+
+on sysvar LIN::Seat_forward
+{
+  $Seatsetting::Seat_forward = @this;
+}
+
+

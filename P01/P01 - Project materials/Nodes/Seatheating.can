@@ -3,6 +3,7 @@ variables
 {
   //declare millisecond Timer
   msTimer tHeating;
+
 }
 
 on linFrame Seatheating
@@ -21,4 +22,3 @@ on timer tHeating
   @LIN::Seatheating_LEDDsp = 0;
   @LIN::Seatheating_Dsp = 0;
 }
-

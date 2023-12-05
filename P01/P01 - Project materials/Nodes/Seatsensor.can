@@ -3,6 +3,8 @@ variables
 {
   //declare LIN frame
   linFrame Seatsensor msgSeatsensor;
+  int carUnlocked = 0;
+  int ignitionStatus = 0;
 }
 
 on sysvar LIN::SeatSensor
@@ -10,4 +12,3 @@ on sysvar LIN::SeatSensor
   msgSeatsensor.Seatsensor = @this;
   output(msgSeatsensor);
 }
-

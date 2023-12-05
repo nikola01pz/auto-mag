@@ -1,0 +1,70 @@
+/*@!Encoding:1252*/
+variables
+{
+  
+}
+
+on preStart{
+  linStopScheduler();
+}
+
+on message CarLockingSystem
+{
+  $GW_Ignition::LockingSystem = $LockingSystem::ActualState;
+  if(this.ActualState == 1)
+  {
+    linStartScheduler();
+  } else {
+    linStopScheduler();
+  }
+}
+
+on message Ignition
+{
+  $GW_Ignition::PowerOn = $Ignition::PowerOn;
+}
+
+on sysvar LIN::Seatheating
+{
+  if($Ignition::PowerOn == 1)
+  {
+    $Heating = @this;
+  } else if($Ignition::PowerOn == 0)
+  {
+    write("First start car, heating not working!");
+    $Heating = 0;
+  }
+}
+
+on sysvar LIN::SeatSensor
+{
+  if($Ignition::PowerOn == 1)
+  {
+    $Seatsensor = @this;
+  } else if($Ignition::PowerOn == 0)
+  {
+    write("First start car, seat sensor not working!");
+    $Seatsensor = 0;
+  }
+}
+
+on linFrame Seatsensor
+{
+  if(this.Seatsensor == 1)
+  {
+    @LIN::SeatSensor_Dsp = 1;
+  } else
+  {
+    @LIN::SeatSensor_Dsp = 0;
+  }
+}
+
+on linFrame GW_Ignition
+{
+  if(this.PowerOn == 0)
+  {
+    @LIN::Seatheating = 0;
+    @LIN::SeatSensor = 0;
+  }
+}
+

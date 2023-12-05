@@ -74,3 +74,13 @@ on linFrame StoreSeatposition
   if(this.Storeposition)  gStoredPosition[gDriverID] = gCurrentPosition;
 }
 
+on sysvar LIN::Seatback_back
+{
+  if(@this == 1)
+  {
+    @sysvar::LIN::Seatback_back_Dsp = 1;
+  } else 
+  {
+    @sysvar::LIN::Seatback_back_Dsp = 0;
+  }
+}
