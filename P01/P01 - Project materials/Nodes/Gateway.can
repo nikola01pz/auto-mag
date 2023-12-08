@@ -2,6 +2,8 @@
 variables
 {
   int seatSensorActivated = 0;
+  int driverSelected = 0;
+  int counter = 0;
 }
 
 on preStart{
@@ -113,8 +115,23 @@ on sysvar LIN::Head_down
 }
 
 on message Driver_ID
-{
-  $StoreSeatposition::Storeposition = this.StoreSeatposition;
-  $Seatposition::Driver = this.Driver;
+{ 
+  if(counter == 0)
+  {
+    $Seatposition::Driver = $Driver_ID::Driver;
+    counter++;
+  } else if(counter == 1)
+  {
+    $Driver_ID::StoreSeatposition = 1;
+    counter = 0;
+  }
+  $StoreSeatposition::Storeposition = $Driver_ID::StoreSeatposition; 
 }
 
+on linFrame StoreSeatposition
+{
+  if(this.Storeposition == 1)
+  {
+    $Driver_ID::StoreSeatposition = 0;
+  }
+}
