@@ -2,7 +2,6 @@
 variables
 {
   int seatSensorActivated = 0;
-  int driverSelected = 0;
   int counter = 0;
 }
 
@@ -45,7 +44,7 @@ on sysvar LIN::SeatSensor
     $Seatsensor = @this;
     seatSensorActivated = @this;
     $Heating = @LIN::Seatheating;
-  } else if($Ignition::PowerOn == 0)
+  } else if($Ignition::PowerOn == 0 && @this ==1)
   {
     write("First start car, seat sensor not working!");
     $Seatsensor = 0;
