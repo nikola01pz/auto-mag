@@ -1,0 +1,54 @@
+/*@!Encoding:1250*/
+includes
+{
+  
+}
+
+variables
+{
+  float divisor = 0;
+  float carSpeed = 0;
+  float engineSpeed = 0;
+  float gearRatio = 0;
+}
+
+on signal sigEngineSpeed
+{
+  engineSpeed = this.raw;
+}
+
+on signal sigGear
+{
+  divisor = this.raw;
+  if(divisor == 1)
+  {
+    carSpeed = (((engineSpeed/60)/ 33) * pi * 0.6 * 3.6);
+  } else if(divisor == 2)
+  {
+    carSpeed = (((engineSpeed/60)/ 22.5) * pi * 0.6 * 3.6);
+  }else if(divisor == 3)
+  {
+    carSpeed = (((engineSpeed/60)/ 17.5) * pi * 0.6 * 3.6);
+  }else if(divisor == 4)
+  {
+    carSpeed = (((engineSpeed/60)/ 10) * pi * 0.6 * 3.6);
+  }else if(divisor == 5)
+  {
+    carSpeed = (((engineSpeed/60)/ 8.5) * pi * 0.6 * 3.6);
+  }else if(divisor == 6)
+  {
+    carSpeed = (((engineSpeed/60)/ 8) * pi * 0.6 * 3.6);
+  } else if(divisor == 0)
+  {
+    carSpeed = 0;
+  }
+  write("gear is: %.0f, divisor is: %.0f, car speed is: %f", this.raw, divisor, carSpeed);
+  $TraineeECU_1::grpTraineeECU_1::sigCarSpeed = carSpeed;
+  $TraineeECU_2::grpTraineeECU_2::sigCarSpeed = carSpeed;
+  $TraineeECU_3::grpTraineeECU_3::sigCarSpeed = carSpeed;
+  $TraineeECU_4::grpTraineeECU_4::sigCarSpeed = carSpeed;
+  $TraineeECU_5::grpTraineeECU_5::sigCarSpeed = carSpeed;
+  $TraineeECU_6::grpTraineeECU_6::sigCarSpeed = carSpeed;
+  $TraineeECU_7::grpTraineeECU_7::sigCarSpeed = carSpeed;
+  $TraineeECU_8::grpTraineeECU_8::sigCarSpeed = carSpeed;
+}

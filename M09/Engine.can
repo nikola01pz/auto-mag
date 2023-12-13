@@ -1,0 +1,15 @@
+/*@!Encoding:1250*/
+includes
+{
+  
+}
+
+variables
+{
+  
+}
+
+on signal sigEngineSpeed
+{
+  // CarSpeed = ((EngineSpeed / 60) / 21.64) * pi * 0.6 * 3.6
+}

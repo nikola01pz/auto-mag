@@ -1,0 +1,33 @@
+/*@!Encoding:1250*/
+includes
+{
+  
+}
+
+variables
+{
+  char timeBuffer[64];
+}
+
+on signal sigIgnition
+{
+  getLocalTimeString(timeBuffer);
+  if(this.raw == 0)
+  {
+    write("Signal value is: %.0f, time: %s, signal value changed to: off", this.raw, timeBuffer);
+  }
+  else if(this.raw == 1.0)
+  {
+    write("Signal value is: %.0f, time: %s, signal value changed to: radio.", this.raw, timeBuffer);
+  } else if(this.raw == 2.0)
+  {
+    write("Signal value is: %.0f, time: %s, signal value changed to: igniton.", this.raw, timeBuffer);
+  } else if(this.raw == 3.0)
+  {
+    write("Signal value is: %.0f, time: %s, signal value changed to: start.", this.raw, timeBuffer);
+  } else
+  {
+    write("Error message: Something wrong happened");
+  }
+}
+
