@@ -1,4 +1,4 @@
-;CANoe Version |4|14|0|36404 EngineStateSwitch 
+;CANoe Version |4|14|0|36384 EngineStateSwitch 
 Version: 14.0.83 Build 83
 32 PRO
 5
@@ -72,7 +72,7 @@ VUniqueBox 8 Begin_Of_Object
 VBoxRoot 9 Begin_Of_Object
 1
 3
-1 3 0 1 0 621 -1 -1 1416 190 1766 543
+1 5 0 1 -1 -1 -1 -1 1225 1 1575 221
 EngineStateSwitchTest
 1
 
@@ -80,23 +80,23 @@ MDI_DOCK_INFO_END
 5
 1
 6
-0 1 0 621 -1 -1 1416 190 1766 543
+0 1 -1 -1 -1 -1 1225 1 1575 221
 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 -1 32767 0 0 0 0 0 0 0 0 0 0 -1 -1 0 0 0 0 0 0 
 END_OF_DOCK_INFO
 1
-3
+5
 1
 0 1 -1 -1 -1 -1 480 260 1440 780
 0
 1
-1920 649
+1920 667
 END_OF_DESKTOP_DATA
 6
 0 1 0 0 0 0 240 280 590 530
 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 -1 32767 0 0 0 0 0 0 0 0 0 0 -1 -1 0 0 0 0 0 0 
 END_OF_DOCK_INFO
 0
--1
+2
 1
 0 1 -1 -1 -1 -1 480 260 1440 780
 0
@@ -108,7 +108,7 @@ END_OF_DESKTOP_DATA
 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 -1 32767 0 0 0 0 0 0 0 0 0 0 -1 -1 0 0 0 0 0 0 
 END_OF_DOCK_INFO
 0
--1
+2
 1
 0 1 -1 -1 -1 -1 480 260 1440 780
 0
@@ -223,14 +223,7 @@ IDS_REPORTFITLER_ITEM_ELMINFO=1
 End_Of_ReportFilter_Items
 0 
 NULL
-VConfigSysVar 6 Begin_Of_Object
-1
-VConfigEvent 7 Begin_Of_Object
-1
-End_Of_Object VConfigEvent 7
-Engine
-EngineStateSwitch
-End_Of_Object VConfigSysVar 6
+NULL
 0
 <VFileName V9 QL> 1 "EngineStateSwitchTest_report.xml" 
 1 0 1
@@ -256,7 +249,7 @@ VUniqueBox 7 Begin_Of_Object
 VBoxRoot 8 Begin_Of_Object
 1
 3
-1 3 0 1 0 621 -1 -1 1416 190 1766 543
+1 5 0 1 -1 -1 -1 -1 1225 1 1575 221
 EngineStateSwitchTest
 1
 
@@ -264,23 +257,23 @@ MDI_DOCK_INFO_END
 5
 1
 6
-0 1 0 621 -1 -1 1416 190 1766 543
+0 1 -1 -1 -1 -1 1225 1 1575 221
 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 -1 32767 0 0 0 0 0 0 0 0 0 0 -1 -1 0 0 0 0 0 0 
 END_OF_DOCK_INFO
 1
-3
+5
 1
 0 1 -1 -1 -1 -1 480 260 1440 780
 0
 1
-1920 649
+1920 667
 END_OF_DESKTOP_DATA
 6
 0 1 0 0 0 0 240 280 590 530
 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 -1 32767 0 0 0 0 0 0 0 0 0 0 -1 -1 0 0 0 0 0 0 
 END_OF_DOCK_INFO
 0
--1
+2
 1
 0 1 -1 -1 -1 -1 480 260 1440 780
 0
@@ -292,7 +285,7 @@ END_OF_DESKTOP_DATA
 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 -1 32767 0 0 0 0 0 0 0 0 0 0 -1 -1 0 0 0 0 0 0 
 END_OF_DOCK_INFO
 0
--1
+2
 1
 0 1 -1 -1 -1 -1 480 260 1440 780
 0
@@ -352,7 +345,7 @@ End_Of_Object VConfigurationBox 6
 NULL
 0
 0
-<VFileName V9 QL> 1 "..\rptEA68.xml" 
+<VFileName V9 QL> 1 "..\rptCC21.xml" 
 End_Of_Object VTestNode 5
 VTestModuleControllerCapl 5 Begin_Of_Object
 1

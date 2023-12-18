@@ -9,31 +9,31 @@ variables
   
 }
 
+
 void MainTest()
 {
-  tcsEngineSwitchOnState();
-  tcsEngineSwitchOffState();
+  EngineSwitchOnState();
+  EngineSwitchOffState();
 }
 
-testcase tcsEngineSwitchOnState()
+testcase EngineSwitchOnState()
 {
-  if(testWaitForSignalMatch(OnOff, 1, 100) == 1)
+  if((testWaitForSignalMatch(OnOff, @sysvar::Engine::EngineStateSwitch, 100) == 1) && ($OnOff == 1))
   {
-    testStepPass("EngineState", "engine is on");
+    testStepPass("EngineState", "engine on, values same");
   } else 
   {
-    testStepFail("EngineState", "engine is not turned on");
+    testStepFail("EngineState", "failed");
   }
 }
 
-testcase tcsEngineSwitchOffState()
+testcase EngineSwitchOffState()
 {
-  if (testWaitForSignalMatch(OnOff, 0, 15000) == 1)
+  if((testWaitForSignalMatch(OnOff, @sysvar::Engine::EngineStateSwitch, 100) == 1) && ($OnOff == 0))
   {
-    testStepPass("EngineState", "engine is off");
+    testStepPass("EngineState", "engine off, values same");
   } else 
   {
-    testStepFail("EngineState", "engine is not turned off");
+    testStepFail("EngineState", "failed");
   }
 }
-

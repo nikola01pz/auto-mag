@@ -6,33 +6,41 @@ includes
 
 variables
 {
-  
+  float temp = 0;
 }
 
 void MainTest()
 {
-  tscHeadLightsOn();
-  tscHeadLightsOff();
+  HeadLightsOn();
+  HeadLightsOff();
 }
 
-testcase tscHeadLightsOn()
+testcase HeadLightsOn()
 {
-  if (testWaitForSignalMatch(sysvar::Lights::LightDisplay, 4, 2000) == 1)
+  if($HeadLight== 1)
   {
-    testStepPass("EngineSpeed", "signal and sysvar matched, headlights on");
+    temp = 4;
+  }
+  if ((testWaitForSignalMatch(sysvar::Lights::LightDisplay, temp, 2000) == 1) && ($HeadLight == 1))
+  {
+    testStepPass("EngineSpeed", "lights on, values same");
   } else 
   {
-    testStepFail("EngineSpeed", "values not matched");
+    testStepFail("EngineSpeed", "failed");
   }
 }
 
-testcase tscHeadLightsOff()
+testcase HeadLightsOff()
 {
-  if (testWaitForSignalMatch(sysvar::Lights::LightDisplay, 0, 2000) == 1)
+  if($HeadLight== 1)
   {
-    testStepPass("EngineSpeed", "signal and sysvar matched, headlights off");
+    temp = 4;
+  }
+  if ((testWaitForSignalMatch(sysvar::Lights::LightDisplay, temp, 2000) == 1) && ($HeadLight == 0))
+  {
+    testStepPass("EngineSpeed", "lights off, values same");
   } else 
   {
-    testStepFail("EngineSpeed", "values not matched");
+    testStepFail("EngineSpeed", "failed");
   }
 }

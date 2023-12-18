@@ -6,15 +6,15 @@ includes
 
 variables
 {
-  long engineSpeedSys = 0;
+
 }
 
 void MainTest()
 {
-  tscEngineSpeedState();
+  EngineSpeedState();
 }
 
-testcase tscEngineSpeedState()
+testcase EngineSpeedState()
 {
   
   if (testWaitForSignalMatch(EngineSpeed, @sysvar::Engine::EngineSpeedEntry, 2000) == 1)

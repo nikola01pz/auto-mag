@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<testmodule starttime="2023-12-18 14:56:36" timestamp="   6.700246" verdicts="2_basic" measurementid="9544f82a-11fd-4e12-9a8c-406c37a76494">
-  <testcase starttime="2023-12-18 14:56:36" timestamp="   6.700246">
-    <teststep timestamp="   6.700246" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
-    <teststep timestamp="   6.700246" level="0" type="user" ident="EngineSpeed" result="pass">signal and sysvar matched, headlights on</teststep>
-    <verdict time="2023-12-18 14:56:36" timestamp="   6.700246" endtime="2023-12-18 14:56:36" endtimestamp="   6.700246" result="pass" />
-    <title>tscHeadLightsOn</title>
+<testmodule starttime="2023-12-18 16:49:06" timestamp="  15.811161" verdicts="2_basic" measurementid="a1ae3f62-2e6c-4a3e-942d-3c3d8c4addda">
+  <testcase starttime="2023-12-18 16:49:06" timestamp="  15.811161">
+    <teststep timestamp="  15.811161" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+    <teststep timestamp="  15.811161" level="0" type="user" ident="EngineSpeed" result="fail">failed</teststep>
+    <verdict time="2023-12-18 16:49:06" timestamp="  15.811161" endtime="2023-12-18 16:49:06" endtimestamp="  15.811161" result="fail" />
+    <title>HeadLightsOn</title>
   </testcase>
-  <testcase starttime="2023-12-18 14:56:36" timestamp="   6.700246">
-    <teststep timestamp="   7.700248" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;LightDisplay&apos; Elapsed time=1000ms (max=2000ms)</teststep>
-    <teststep timestamp="   7.700248" level="0" type="user" ident="EngineSpeed" result="pass">signal and sysvar matched, headlights off</teststep>
-    <verdict time="2023-12-18 14:56:37" timestamp="   7.700248" endtime="2023-12-18 14:56:37" endtimestamp="   7.700248" result="pass" />
-    <title>tscHeadLightsOff</title>
+  <testcase starttime="2023-12-18 16:49:06" timestamp="  15.811161">
+    <teststep timestamp="  15.811161" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+    <teststep timestamp="  15.811161" level="0" type="user" ident="EngineSpeed" result="pass">lights off, values same</teststep>
+    <verdict time="2023-12-18 16:49:06" timestamp="  15.811161" endtime="2023-12-18 16:49:06" endtimestamp="  15.811161" result="pass" />
+    <title>HeadLightsOff</title>
   </testcase>
-  <verdict time="2023-12-18 14:56:37" timestamp="   7.700248" endtime="2023-12-18 14:56:37" endtimestamp="   7.700248" result="pass" />
+  <verdict time="2023-12-18 16:49:06" timestamp="  15.811161" endtime="2023-12-18 16:49:06" endtimestamp="  15.811161" result="fail" />
   <title>HeadLightsTest</title>
   <testlogfiles>
   </testlogfiles>
@@ -45,7 +45,7 @@
     </xinfo>
     <xinfo>
       <name>Last modification of Test Module File</name>
-      <description>2023-12-18, 14:50:15</description>
+      <description>2023-12-18, 16:43:11</description>
     </xinfo>
     <xinfo>
       <name>Windows Computer Name</name>
@@ -61,4 +61,4 @@
     </xinfo>
   </testsetup>
 </testmodule>
-<!--footprint="19b58737219fe1dc0cc98d57477e4bc2" version="1"-->
+<!--footprint="3f063c5b06c323764eb8f83dcba87920" version="1"-->

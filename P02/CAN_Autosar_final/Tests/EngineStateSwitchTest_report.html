@@ -709,7 +709,7 @@
     <center>
       <table class="OverallResultTable">
         <tr>
-          <td class="PositiveResult">Test passed</td>
+          <td class="NegativeResult">Test failed</td>
         </tr>
       </table>
     </center>
@@ -756,7 +756,7 @@
           </tr>
           <tr>
             <td class="CellNoColor">Last modification of Test Module File: </td>
-            <td class="CellNoColor">2023-12-18, 14:41:29</td>
+            <td class="CellNoColor">2023-12-18, 16:43:15</td>
           </tr>
           <tr>
             <td class="CellNoColor">Windows Computer Name: </td>
@@ -785,13 +785,13 @@
       <table class="DefaultTable">
         <tr>
           <td style="padding-right: 0.5em;" class="CellNoColor">Test begin: </td>
-          <td style="padding-right: 0.5em;" class="CellNoColor">2023-12-18 14:56:31</td>
-          <td class="CellNoColor">(logging timestamp    1.050000)</td>
+          <td style="padding-right: 0.5em;" class="CellNoColor">2023-12-18 16:48:57</td>
+          <td class="CellNoColor">(logging timestamp    6.370536)</td>
         </tr>
         <tr>
           <td style="padding-right: 0.5em;" class="CellNoColor">Test end: </td>
-          <td style="padding-right: 0.5em;" class="CellNoColor">2023-12-18 14:56:39</td>
-          <td class="CellNoColor" nowrap>(logging timestamp    8.900134)</td>
+          <td style="padding-right: 0.5em;" class="CellNoColor">2023-12-18 16:48:57</td>
+          <td class="CellNoColor" nowrap>(logging timestamp    6.370536)</td>
         </tr>
       </table>
       <div class="Heading4">Statistics</div>
@@ -814,13 +814,13 @@
           </tr>
           <tr>
             <td class="DefineCell">Test cases passed </td>
-            <td class="NumberCellPositiveResult">2</td>
-            <td class="NumberCellPositiveResult">100% of executed test cases</td>
+            <td class="NumberCellPositiveResult">1</td>
+            <td class="NumberCellPositiveResult">50% of executed test cases</td>
           </tr>
           <tr>
             <td class="DefineCell">Test cases failed </td>
-            <td class="NumberCell">0</td>
-            <td class="NumberCell">0% of executed test cases</td>
+            <td class="NumberCellNegativeResult">1</td>
+            <td class="NumberCellNegativeResult">50% of executed test cases</td>
           </tr>
         </table>
       </div>
@@ -831,7 +831,7 @@
             <td class="DefineCell">1</td>
             <td class="DefaultCell"></td>
             <td class="DefaultCell">
-              <a href="#i__1453917008_9">tcsEngineSwitchOnState</a>
+              <a href="#i__2098689104_9">EngineSwitchOnState</a>
             </td>
             <td class="PositiveResultCell">pass</td>
           </tr>
@@ -839,9 +839,11 @@
             <td class="DefineCell">2</td>
             <td class="DefaultCell"></td>
             <td class="DefaultCell">
-              <a href="#i__1453917008_50">tcsEngineSwitchOffState</a>
+              <a href="#i__2098689104_50">EngineSwitchOffState</a>
             </td>
-            <td class="PositiveResultCell">pass</td>
+            <td class="NegativeResultCell">
+              <a href="#i__2098689104_66" onclick="showTC('2')">fail</a>
+            </td>
           </tr>
         </table>
       </div>
@@ -870,7 +872,7 @@
           <a class="Undecorated" id="lnk_1" href="javascript:switchAll('1',document.all['lnk_1'].text)">[−]</a>
         </td>
         <td class="TestcaseHeadingPositiveResult">
-          <big class="Heading3">1 <a name="i__1453917008_9">tcsEngineSwitchOnState</a>: Passed</big>
+          <big class="Heading3">1 <a name="i__2098689104_9">EngineSwitchOnState</a>: Passed</big>
         </td>
       </tr>
     </table>
@@ -879,13 +881,13 @@
         <table class="DefaultTable">
           <tr>
             <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
-            <td style="padding-right: 0.5em;" class="CellNoColor">2023-12-18 14:56:31</td>
-            <td class="CellNoColor">(logging timestamp    1.050000)</td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2023-12-18 16:48:57</td>
+            <td class="CellNoColor">(logging timestamp    6.370536)</td>
           </tr>
           <tr>
             <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
-            <td style="padding-right: 0.5em;" class="CellNoColor">2023-12-18 14:56:31</td>
-            <td class="CellNoColor" nowrap>(logging timestamp    1.100132)</td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2023-12-18 16:48:57</td>
+            <td class="CellNoColor" nowrap>(logging timestamp    6.370536)</td>
           </tr>
         </table>
       </div>
@@ -906,15 +908,15 @@
             <th class="TableHeadingCell" width="1px">Result</th>
           </tr>
           <tr>
-            <td class="DefineCell">   1.100132</td>
+            <td class="DefineCell">   6.370536</td>
             <td class="NumberCell">Resume reason</td>
-            <td class="DefaultCell">Resumed on signal 'Signal:CAN1/Easy/EngineState/OnOff' Elapsed time=50.132ms (max=100ms)</td>
+            <td class="DefaultCell">Immediately resumed on setup of wait condition.</td>
             <td class="DefaultCell">-</td>
           </tr>
           <tr>
-            <td class="DefineCell">   1.100132</td>
+            <td class="DefineCell">   6.370536</td>
             <td class="NumberCell">EngineState</td>
-            <td class="DefaultCell">engine is on</td>
+            <td class="DefaultCell">engine on, values same</td>
             <td class="PositiveResultCell">pass</td>
           </tr>
         </table>
@@ -925,8 +927,8 @@
         <td class="LinkCell">
           <a class="Undecorated" id="lnk_2" href="javascript:switchAll('2',document.all['lnk_2'].text)">[−]</a>
         </td>
-        <td class="TestcaseHeadingPositiveResult">
-          <big class="Heading3">2 <a name="i__1453917008_50">tcsEngineSwitchOffState</a>: Passed</big>
+        <td class="TestcaseHeadingNegativeResult">
+          <big class="Heading3">2 <a name="i__2098689104_50">EngineSwitchOffState</a>: Failed</big>
         </td>
       </tr>
     </table>
@@ -935,13 +937,13 @@
         <table class="DefaultTable">
           <tr>
             <td style="padding-right: 0.5em;" class="CellNoColor">Test case begin: </td>
-            <td style="padding-right: 0.5em;" class="CellNoColor">2023-12-18 14:56:31</td>
-            <td class="CellNoColor">(logging timestamp    1.100132)</td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2023-12-18 16:48:57</td>
+            <td class="CellNoColor">(logging timestamp    6.370536)</td>
           </tr>
           <tr>
             <td style="padding-right: 0.5em;" class="CellNoColor">Test case end: </td>
-            <td style="padding-right: 0.5em;" class="CellNoColor">2023-12-18 14:56:39</td>
-            <td class="CellNoColor" nowrap>(logging timestamp    8.900134)</td>
+            <td style="padding-right: 0.5em;" class="CellNoColor">2023-12-18 16:48:57</td>
+            <td class="CellNoColor" nowrap>(logging timestamp    6.370536)</td>
           </tr>
         </table>
       </div>
@@ -962,16 +964,16 @@
             <th class="TableHeadingCell" width="1px">Result</th>
           </tr>
           <tr>
-            <td class="DefineCell">   8.900134</td>
+            <td class="DefineCell">   6.370536</td>
             <td class="NumberCell">Resume reason</td>
-            <td class="DefaultCell">Resumed on signal 'Signal:CAN1/Easy/EngineState/OnOff' Elapsed time=7800ms (max=15000ms)</td>
+            <td class="DefaultCell">Immediately resumed on setup of wait condition.</td>
             <td class="DefaultCell">-</td>
           </tr>
-          <tr>
-            <td class="DefineCell">   8.900134</td>
+          <tr id="i__2098689104_66">
+            <td class="DefineCell">   6.370536</td>
             <td class="NumberCell">EngineState</td>
-            <td class="DefaultCell">engine is off</td>
-            <td class="PositiveResultCell">pass</td>
+            <td class="DefaultCell">failed</td>
+            <td class="NegativeResultCell">fail</td>
           </tr>
         </table>
       </div>
