@@ -9,7 +9,6 @@ variables
   float divisor = 0;
   float carSpeed = 0;
   float engineSpeed = 0;
-  float gearRatio = 0;
 }
 
 on signal sigEngineSpeed
@@ -20,27 +19,32 @@ on signal sigEngineSpeed
 on signal sigGear
 {
   divisor = this.raw;
-  if(divisor == 1)
-  {
-    carSpeed = (((engineSpeed/60)/ 33) * pi * 0.6 * 3.6);
-  } else if(divisor == 2)
-  {
-    carSpeed = (((engineSpeed/60)/ 22.5) * pi * 0.6 * 3.6);
-  }else if(divisor == 3)
-  {
-    carSpeed = (((engineSpeed/60)/ 17.5) * pi * 0.6 * 3.6);
-  }else if(divisor == 4)
-  {
-    carSpeed = (((engineSpeed/60)/ 10) * pi * 0.6 * 3.6);
-  }else if(divisor == 5)
-  {
-    carSpeed = (((engineSpeed/60)/ 8.5) * pi * 0.6 * 3.6);
-  }else if(divisor == 6)
-  {
-    carSpeed = (((engineSpeed/60)/ 8) * pi * 0.6 * 3.6);
-  } else if(divisor == 0)
+  
+  if(divisor == 0)
   {
     carSpeed = 0;
+  } else if(divisor == 1)
+  {
+    carSpeed = (((engineSpeed/60)/330) * pi * 0.6 * 3.6);
+  }
+  else if(divisor == 2)
+  {
+    carSpeed = (((engineSpeed/60)/225) * pi * 0.6 * 3.6);
+  }else if(divisor == 3)
+  {
+    carSpeed = (((engineSpeed/60)/175) * pi * 0.6 * 3.6);
+  }else if(divisor == 4)
+  {
+    carSpeed = (((engineSpeed/60)/100) * pi * 0.6 * 3.6);
+  }else if(divisor == 5)
+  {
+    carSpeed = (((engineSpeed/60)/85) * pi * 0.6 * 3.6);
+  }else if(divisor == 6)
+  {
+    carSpeed = (((engineSpeed/60)/80) * pi * 0.6 * 3.6);
+  } else if(divisor == -1)
+  {
+    carSpeed = (((engineSpeed/60)/400) * pi * 0.6 * 3.6);;
   }
   write("gear is: %.0f, divisor is: %.0f, car speed is: %f", this.raw, divisor, carSpeed);
   $TraineeECU_1::grpTraineeECU_1::sigCarSpeed = carSpeed;
