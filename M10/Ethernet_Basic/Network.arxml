@@ -1,0 +1,1661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Vector</SHORT-NAME>
+      <ELEMENTS>
+        <ETHERNET-CLUSTER>
+          <SHORT-NAME>Vehicle_Ethernet</SHORT-NAME>
+          <ETHERNET-CLUSTER-VARIANTS>
+            <ETHERNET-CLUSTER-CONDITIONAL>
+              <BAUDRATE>100000000</BAUDRATE>
+              <PHYSICAL-CHANNELS>
+                <ETHERNET-PHYSICAL-CHANNEL>
+                  <SHORT-NAME>adas_channel</SHORT-NAME>
+                  <COMM-CONNECTORS>
+                    <COMMUNICATION-CONNECTOR-REF-CONDITIONAL>
+                      <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/Vector/ECUs/ADAS/adas_adas_connector</COMMUNICATION-CONNECTOR-REF>
+                    </COMMUNICATION-CONNECTOR-REF-CONDITIONAL>
+                    <COMMUNICATION-CONNECTOR-REF-CONDITIONAL>
+                      <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/Vector/ECUs/CAMF/camf_adas_connector</COMMUNICATION-CONNECTOR-REF>
+                    </COMMUNICATION-CONNECTOR-REF-CONDITIONAL>
+                    <COMMUNICATION-CONNECTOR-REF-CONDITIONAL>
+                      <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/VectorAutosarExplorerGeneratedObjects/ECU_INSTANCES/ECU1/Connector_ECU1_4cf9cc795f85d190</COMMUNICATION-CONNECTOR-REF>
+                    </COMMUNICATION-CONNECTOR-REF-CONDITIONAL>
+                  </COMM-CONNECTORS>
+                  <FRAME-TRIGGERINGS>
+                    <ETHERNET-FRAME-TRIGGERING>
+                      <SHORT-NAME>NewFrameTriggering_2f6b3f740c234848</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/VectorAutosarExplorerGeneratedObjects/ECU_INSTANCES/ECU1/Connector_ECU1_4cf9cc795f85d190/framePort_e67b608a2bb464ce</FRAME-PORT-REF>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/Vector/ECUs/CAMF/camf_adas_connector/framePort_cebc782724e53fc8</FRAME-PORT-REF>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/Vector/ECUs/ADAS/adas_adas_connector/framePort_62ac53be7c98bae8</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="ETHERNET-FRAME">/VectorAutosarExplorerGeneratedObjects/FRAME/Frame1</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Vector/Vehicle_Ethernet/adas_channel/NewPduTriggering_28fbffaef4be3f29</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Vector/Vehicle_Ethernet/adas_channel/NewPduTriggering_6c5fa0a90d272d49</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Vector/Vehicle_Ethernet/adas_channel/NewPduTriggering_5403554477012dda</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Vector/Vehicle_Ethernet/adas_channel/NewPduTriggering_974933ef60ee807d</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                    </ETHERNET-FRAME-TRIGGERING>
+                  </FRAME-TRIGGERINGS>
+                  <I-SIGNAL-TRIGGERINGS>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>NewSignalTriggering_aeae45c202ac5ed9</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/VectorAutosarExplorerGeneratedObjects/ECU_INSTANCES/ECU1/Connector_ECU1_4cf9cc795f85d190/SP_06e4599ba34c43e198fe1a59a9ea2efc_Tx</I-SIGNAL-PORT-REF>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/Vector/ECUs/CAMF/camf_adas_connector/SP_5f9c65a1dfe543d1a8ffe2a8fc6bc7e1_Rx</I-SIGNAL-PORT-REF>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/Vector/ECUs/ADAS/adas_adas_connector/SP_788cdfe9b9994951af3848b14f647bda_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal1</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>NewSignalTriggering_0edab81723dc4b1c</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/VectorAutosarExplorerGeneratedObjects/ECU_INSTANCES/ECU1/Connector_ECU1_4cf9cc795f85d190/SP_064ac8d0611e41f19b3b344b591bcc1b_Tx</I-SIGNAL-PORT-REF>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/Vector/ECUs/CAMF/camf_adas_connector/SP_eeb3515adab64510a5213bbe1b6e9346_Rx</I-SIGNAL-PORT-REF>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/Vector/ECUs/ADAS/adas_adas_connector/SP_d637d69c8ffe46f494bbc5cb737fad5b_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal2</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>NewSignalTriggering_e2620a5dd6a2e275</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/VectorAutosarExplorerGeneratedObjects/ECU_INSTANCES/ECU1/Connector_ECU1_4cf9cc795f85d190/SP_4f1e3bc60ef14bc8ad1c7d2296870d14_Tx</I-SIGNAL-PORT-REF>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/Vector/ECUs/CAMF/camf_adas_connector/SP_2131a5c8e39c4df6b198ffdaaf50a561_Rx</I-SIGNAL-PORT-REF>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/Vector/ECUs/ADAS/adas_adas_connector/SP_6ef020db31a5488b90403a3f47ee9a00_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal3</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>NewSignalTriggering_376380e8909ae22f</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/VectorAutosarExplorerGeneratedObjects/ECU_INSTANCES/ECU1/Connector_ECU1_4cf9cc795f85d190/SP_dff5c7984ddc47968098e803700d8689_Tx</I-SIGNAL-PORT-REF>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/Vector/ECUs/CAMF/camf_adas_connector/SP_886fe96168a74d53bb7b2375fa3386f5_Rx</I-SIGNAL-PORT-REF>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/Vector/ECUs/ADAS/adas_adas_connector/SP_961041ffb0954f4a8819dd4541a6e94d_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal5</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>NewSignalTriggering_bb431cb19736142b</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/VectorAutosarExplorerGeneratedObjects/ECU_INSTANCES/ECU1/Connector_ECU1_4cf9cc795f85d190/SP_4d53d8a3afe443d6961dab7fee16a214_Tx</I-SIGNAL-PORT-REF>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/Vector/ECUs/CAMF/camf_adas_connector/SP_e7ec367ecef44cdea6023453ebffa41f_Rx</I-SIGNAL-PORT-REF>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/Vector/ECUs/ADAS/adas_adas_connector/SP_5f7791a1aca8428a9eec266d19905386_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal4</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                  </I-SIGNAL-TRIGGERINGS>
+                  <PDU-TRIGGERINGS>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>pdu_triggering_TrafficSignDetectionPDU</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/Vector/ECUs/CAMF/camf_adas_connector/pdu_port_out_camf_adas_connector</I-PDU-PORT-REF>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/Vector/ECUs/ADAS/adas_adas_connector/pdu_port_in_adas_adas_connector</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="I-SIGNAL-I-PDU">/Vector/PDUs/TrafficSignDetectionPDU</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>NewPduTriggering_28fbffaef4be3f29</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/VectorAutosarExplorerGeneratedObjects/ECU_INSTANCES/ECU1/Connector_ECU1_4cf9cc795f85d190/PP_2520c0485b6143ef92680726d81e2950_Tx</I-PDU-PORT-REF>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/Vector/ECUs/CAMF/camf_adas_connector/PP_1b0c1b3703f04b01b9f4604c18367d7a_Rx</I-PDU-PORT-REF>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/Vector/ECUs/ADAS/adas_adas_connector/PP_ab7dfd878a224cb08a090662681384f7_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="I-SIGNAL-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/PDU1</I-PDU-REF>
+                      <I-SIGNAL-TRIGGERINGS>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Vector/Vehicle_Ethernet/adas_channel/NewSignalTriggering_aeae45c202ac5ed9</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Vector/Vehicle_Ethernet/adas_channel/NewSignalTriggering_0edab81723dc4b1c</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                      </I-SIGNAL-TRIGGERINGS>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>NewPduTriggering_6c5fa0a90d272d49</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/VectorAutosarExplorerGeneratedObjects/ECU_INSTANCES/ECU1/Connector_ECU1_4cf9cc795f85d190/PP_209a384453854a3680e3cc96129e598c_Tx</I-PDU-PORT-REF>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/Vector/ECUs/CAMF/camf_adas_connector/PP_93e8c703c8904049baffccc6c9df313d_Rx</I-PDU-PORT-REF>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/Vector/ECUs/ADAS/adas_adas_connector/PP_669bbad74f39435d93e405517b49fd51_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="GENERAL-PURPOSE-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/PDU2</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>NewPduTriggering_5403554477012dda</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/VectorAutosarExplorerGeneratedObjects/ECU_INSTANCES/ECU1/Connector_ECU1_4cf9cc795f85d190/PP_dd443530ba404ebfaaf992ee7ebf7dcb_Tx</I-PDU-PORT-REF>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/Vector/ECUs/CAMF/camf_adas_connector/PP_20a18118e6f848f687ef897ac3017376_Rx</I-PDU-PORT-REF>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/Vector/ECUs/ADAS/adas_adas_connector/PP_1decec6f30b4462cb0af19aecfad815e_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="CONTAINER-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/PDU3</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>NewPduTriggering_974933ef60ee807d</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/VectorAutosarExplorerGeneratedObjects/ECU_INSTANCES/ECU1/Connector_ECU1_4cf9cc795f85d190/PP_9a425c6e376b4f02a6495a6770f147a9_Tx</I-PDU-PORT-REF>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/Vector/ECUs/CAMF/camf_adas_connector/PP_e7fa727fd2da4821908cf6eac9f04537_Rx</I-PDU-PORT-REF>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/Vector/ECUs/ADAS/adas_adas_connector/PP_c078c331783c40a988aec914bdd22b1f_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="I-SIGNAL-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/PDU4</I-PDU-REF>
+                      <I-SIGNAL-TRIGGERINGS>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Vector/Vehicle_Ethernet/adas_channel/NewSignalTriggering_e2620a5dd6a2e275</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Vector/Vehicle_Ethernet/adas_channel/NewSignalTriggering_376380e8909ae22f</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Vector/Vehicle_Ethernet/adas_channel/NewSignalTriggering_bb431cb19736142b</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                      </I-SIGNAL-TRIGGERINGS>
+                    </PDU-TRIGGERING>
+                  </PDU-TRIGGERINGS>
+                  <NETWORK-ENDPOINTS>
+                    <NETWORK-ENDPOINT>
+                      <SHORT-NAME>adas_adas_nep</SHORT-NAME>
+                      <NETWORK-ENDPOINT-ADDRESSES>
+                        <IPV-4-CONFIGURATION>
+                          <IPV-4-ADDRESS>192.168.3.4</IPV-4-ADDRESS>
+                          <IPV-4-ADDRESS-SOURCE>FIXED</IPV-4-ADDRESS-SOURCE>
+                          <NETWORK-MASK>255.255.255.0</NETWORK-MASK>
+                        </IPV-4-CONFIGURATION>
+                      </NETWORK-ENDPOINT-ADDRESSES>
+                    </NETWORK-ENDPOINT>
+                    <NETWORK-ENDPOINT>
+                      <SHORT-NAME>camf_adas_nep</SHORT-NAME>
+                      <NETWORK-ENDPOINT-ADDRESSES>
+                        <IPV-4-CONFIGURATION>
+                          <IPV-4-ADDRESS>192.168.3.6</IPV-4-ADDRESS>
+                          <IPV-4-ADDRESS-SOURCE>FIXED</IPV-4-ADDRESS-SOURCE>
+                          <NETWORK-MASK>255.255.255.0</NETWORK-MASK>
+                        </IPV-4-CONFIGURATION>
+                      </NETWORK-ENDPOINT-ADDRESSES>
+                    </NETWORK-ENDPOINT>
+                  </NETWORK-ENDPOINTS>
+                  <SO-AD-CONFIG>
+                    <CONNECTION-BUNDLES>
+                      <SOCKET-CONNECTION-BUNDLE>
+                        <SHORT-NAME>ID3</SHORT-NAME>
+                        <BUNDLED-CONNECTIONS>
+                          <SOCKET-CONNECTION>
+                            <CLIENT-PORT-REF DEST="SOCKET-ADDRESS">/Vector/Vehicle_Ethernet/adas_channel/socket_address_adas_adas_aep</CLIENT-PORT-REF>
+                          </SOCKET-CONNECTION>
+                        </BUNDLED-CONNECTIONS>
+                        <PDUS>
+                          <SOCKET-CONNECTION-IPDU-IDENTIFIER>
+                            <HEADER-ID>131137636</HEADER-ID>
+                            <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Vector/Vehicle_Ethernet/adas_channel/pdu_triggering_TrafficSignDetectionPDU</PDU-TRIGGERING-REF>
+                            <ROUTING-GROUP-REFS>
+                              <ROUTING-GROUP-REF DEST="SO-AD-ROUTING-GROUP">/Vector/RoutingGroups/adas_adas_display_info_ceg</ROUTING-GROUP-REF>
+                            </ROUTING-GROUP-REFS>
+                          </SOCKET-CONNECTION-IPDU-IDENTIFIER>
+                        </PDUS>
+                        <SERVER-PORT-REF DEST="SOCKET-ADDRESS">/Vector/Vehicle_Ethernet/adas_channel/socket_address_camf_adas_aep</SERVER-PORT-REF>
+                      </SOCKET-CONNECTION-BUNDLE>
+                    </CONNECTION-BUNDLES>
+                    <SOCKET-ADDRESSS>
+                      <SOCKET-ADDRESS>
+                        <SHORT-NAME>socket_address_adas_adas_aep</SHORT-NAME>
+                        <APPLICATION-ENDPOINT>
+                          <SHORT-NAME>adas_adas_aep</SHORT-NAME>
+                          <CONSUMED-SERVICE-INSTANCES>
+                            <CONSUMED-SERVICE-INSTANCE>
+                              <SHORT-NAME>adas_adas_display_info_csi</SHORT-NAME>
+                              <CONSUMED-EVENT-GROUPS>
+                                <CONSUMED-EVENT-GROUP>
+                                  <SHORT-NAME>adas_adas_display_info_ceg</SHORT-NAME>
+                                  <APPLICATION-ENDPOINT-REF DEST="APPLICATION-ENDPOINT">/Vector/Vehicle_Ethernet/adas_channel/socket_address_adas_adas_aep/adas_adas_aep</APPLICATION-ENDPOINT-REF>
+                                  <EVENT-GROUP-IDENTIFIER>1</EVENT-GROUP-IDENTIFIER>
+                                  <ROUTING-GROUP-REFS>
+                                    <ROUTING-GROUP-REF DEST="SO-AD-ROUTING-GROUP">/Vector/RoutingGroups/adas_adas_display_info_ceg</ROUTING-GROUP-REF>
+                                  </ROUTING-GROUP-REFS>
+                                </CONSUMED-EVENT-GROUP>
+                              </CONSUMED-EVENT-GROUPS>
+                              <PROVIDED-SERVICE-INSTANCE-REF DEST="PROVIDED-SERVICE-INSTANCE">/Vector/Vehicle_Ethernet/adas_channel/socket_address_camf_adas_aep/camf_adas_aep/ADASDisplayInfo</PROVIDED-SERVICE-INSTANCE-REF>
+                              <SD-CLIENT-CONFIG>
+                                <CLIENT-SERVICE-MAJOR-VERSION>1</CLIENT-SERVICE-MAJOR-VERSION>
+                                <CLIENT-SERVICE-MINOR-VERSION>0</CLIENT-SERVICE-MINOR-VERSION>
+                                <INITIAL-FIND-BEHAVIOR>
+                                  <INITIAL-DELAY-MAX-VALUE>0.05</INITIAL-DELAY-MAX-VALUE>
+                                  <INITIAL-DELAY-MIN-VALUE>0.05</INITIAL-DELAY-MIN-VALUE>
+                                  <INITIAL-REPETITIONS-BASE-DELAY>0.1</INITIAL-REPETITIONS-BASE-DELAY>
+                                  <INITIAL-REPETITIONS-MAX>3</INITIAL-REPETITIONS-MAX>
+                                </INITIAL-FIND-BEHAVIOR>
+                                <TTL>3</TTL>
+                              </SD-CLIENT-CONFIG>
+                            </CONSUMED-SERVICE-INSTANCE>
+                          </CONSUMED-SERVICE-INSTANCES>
+                          <NETWORK-ENDPOINT-REF DEST="NETWORK-ENDPOINT">/Vector/Vehicle_Ethernet/adas_channel/adas_adas_nep</NETWORK-ENDPOINT-REF>
+                          <TP-CONFIGURATION>
+                            <UDP-TP>
+                              <UDP-TP-PORT>
+                                <PORT-NUMBER>30500</PORT-NUMBER>
+                              </UDP-TP-PORT>
+                            </UDP-TP>
+                          </TP-CONFIGURATION>
+                        </APPLICATION-ENDPOINT>
+                        <CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/Vector/ECUs/ADAS/adas_adas_connector</CONNECTOR-REF>
+                      </SOCKET-ADDRESS>
+                      <SOCKET-ADDRESS>
+                        <SHORT-NAME>socket_address_camf_adas_aep</SHORT-NAME>
+                        <APPLICATION-ENDPOINT>
+                          <SHORT-NAME>camf_adas_aep</SHORT-NAME>
+                          <NETWORK-ENDPOINT-REF DEST="NETWORK-ENDPOINT">/Vector/Vehicle_Ethernet/adas_channel/camf_adas_nep</NETWORK-ENDPOINT-REF>
+                          <PROVIDED-SERVICE-INSTANCES>
+                            <PROVIDED-SERVICE-INSTANCE>
+                              <SHORT-NAME>ADASDisplayInfo</SHORT-NAME>
+                              <EVENT-HANDLERS>
+                                <EVENT-HANDLER>
+                                  <SHORT-NAME>ADASDisplayInfo_eh</SHORT-NAME>
+                                  <APPLICATION-ENDPOINT-REF DEST="APPLICATION-ENDPOINT">/Vector/Vehicle_Ethernet/adas_channel/socket_address_camf_adas_aep/camf_adas_aep</APPLICATION-ENDPOINT-REF>
+                                  <CONSUMED-EVENT-GROUP-REFS>
+                                    <CONSUMED-EVENT-GROUP-REF DEST="CONSUMED-EVENT-GROUP">/Vector/Vehicle_Ethernet/adas_channel/socket_address_adas_adas_aep/adas_adas_aep/adas_adas_display_info_csi/adas_adas_display_info_ceg</CONSUMED-EVENT-GROUP-REF>
+                                  </CONSUMED-EVENT-GROUP-REFS>
+                                </EVENT-HANDLER>
+                              </EVENT-HANDLERS>
+                              <INSTANCE-IDENTIFIER>1</INSTANCE-IDENTIFIER>
+                              <SD-SERVER-CONFIG>
+                                <INITIAL-OFFER-BEHAVIOR>
+                                  <INITIAL-DELAY-MAX-VALUE>0.05</INITIAL-DELAY-MAX-VALUE>
+                                  <INITIAL-DELAY-MIN-VALUE>0.05</INITIAL-DELAY-MIN-VALUE>
+                                  <INITIAL-REPETITIONS-BASE-DELAY>0.1</INITIAL-REPETITIONS-BASE-DELAY>
+                                  <INITIAL-REPETITIONS-MAX>3</INITIAL-REPETITIONS-MAX>
+                                </INITIAL-OFFER-BEHAVIOR>
+                                <OFFER-CYCLIC-DELAY>2</OFFER-CYCLIC-DELAY>
+                                <SERVER-SERVICE-MAJOR-VERSION>1</SERVER-SERVICE-MAJOR-VERSION>
+                                <SERVER-SERVICE-MINOR-VERSION>0</SERVER-SERVICE-MINOR-VERSION>
+                                <TTL>3</TTL>
+                              </SD-SERVER-CONFIG>
+                              <SERVICE-IDENTIFIER>2001</SERVICE-IDENTIFIER>
+                            </PROVIDED-SERVICE-INSTANCE>
+                          </PROVIDED-SERVICE-INSTANCES>
+                          <TP-CONFIGURATION>
+                            <UDP-TP>
+                              <UDP-TP-PORT>
+                                <PORT-NUMBER>30500</PORT-NUMBER>
+                              </UDP-TP-PORT>
+                            </UDP-TP>
+                          </TP-CONFIGURATION>
+                        </APPLICATION-ENDPOINT>
+                        <CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/Vector/ECUs/CAMF/camf_adas_connector</CONNECTOR-REF>
+                      </SOCKET-ADDRESS>
+                    </SOCKET-ADDRESSS>
+                  </SO-AD-CONFIG>
+                  <VLAN>
+                    <SHORT-NAME>VLAN_ADAS</SHORT-NAME>
+                    <VLAN-IDENTIFIER>3</VLAN-IDENTIFIER>
+                  </VLAN>
+                </ETHERNET-PHYSICAL-CHANNEL>
+              </PHYSICAL-CHANNELS>
+              <PROTOCOL-NAME>ETHERNET</PROTOCOL-NAME>
+              <SPEED>100</SPEED>
+            </ETHERNET-CLUSTER-CONDITIONAL>
+          </ETHERNET-CLUSTER-VARIANTS>
+        </ETHERNET-CLUSTER>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>ECUs</SHORT-NAME>
+          <ELEMENTS>
+            <ECU-INSTANCE>
+              <SHORT-NAME>ADAS</SHORT-NAME>
+              <ASSOCIATED-COM-I-PDU-GROUP-REFS>
+                <ASSOCIATED-COM-I-PDU-GROUP-REF DEST="I-SIGNAL-I-PDU-GROUP">/VectorAutosarExplorerGeneratedObjects/PDU_GROUP/PduGroup_955dbd4975c0465a895ed4df23deb8e9_Rx</ASSOCIATED-COM-I-PDU-GROUP-REF>
+                <ASSOCIATED-COM-I-PDU-GROUP-REF DEST="I-SIGNAL-I-PDU-GROUP">/VectorAutosarExplorerGeneratedObjects/PDU_GROUP/PduGroup_63785361f2144506b8d31587684c4f85_Rx</ASSOCIATED-COM-I-PDU-GROUP-REF>
+              </ASSOCIATED-COM-I-PDU-GROUP-REFS>
+              <COMM-CONTROLLERS>
+                <ETHERNET-COMMUNICATION-CONTROLLER>
+                  <SHORT-NAME>adas_controller</SHORT-NAME>
+                  <ETHERNET-COMMUNICATION-CONTROLLER-VARIANTS>
+                    <ETHERNET-COMMUNICATION-CONTROLLER-CONDITIONAL>
+                      <MAC-UNICAST-ADDRESS>20:00:00:00:01:04</MAC-UNICAST-ADDRESS>
+                    </ETHERNET-COMMUNICATION-CONTROLLER-CONDITIONAL>
+                  </ETHERNET-COMMUNICATION-CONTROLLER-VARIANTS>
+                </ETHERNET-COMMUNICATION-CONTROLLER>
+              </COMM-CONTROLLERS>
+              <CONNECTORS>
+                <ETHERNET-COMMUNICATION-CONNECTOR>
+                  <SHORT-NAME>adas_adas_connector</SHORT-NAME>
+                  <COMM-CONTROLLER-REF DEST="ETHERNET-COMMUNICATION-CONTROLLER">/Vector/ECUs/ADAS/adas_controller</COMM-CONTROLLER-REF>
+                  <ECU-COMM-PORT-INSTANCES>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>pdu_port_in_adas_adas_connector</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <FRAME-PORT>
+                      <SHORT-NAME>framePort_865951f15d378af2</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </FRAME-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_5bba97b699694aaa94ebb0f04a4e9b5e_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_e146f9b782104b5cad34876d7044143f_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_454c83ae900f479d8d6e776bcaf8fd90_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <FRAME-PORT>
+                      <SHORT-NAME>framePort_62ac53be7c98bae8</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </FRAME-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_ab7dfd878a224cb08a090662681384f7_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_788cdfe9b9994951af3848b14f647bda_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_d637d69c8ffe46f494bbc5cb737fad5b_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_669bbad74f39435d93e405517b49fd51_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_1decec6f30b4462cb0af19aecfad815e_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_c078c331783c40a988aec914bdd22b1f_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_6ef020db31a5488b90403a3f47ee9a00_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_961041ffb0954f4a8819dd4541a6e94d_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_5f7791a1aca8428a9eec266d19905386_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                  </ECU-COMM-PORT-INSTANCES>
+                  <NETWORK-ENDPOINT-REFS>
+                    <NETWORK-ENDPOINT-REF DEST="NETWORK-ENDPOINT">/Vector/Vehicle_Ethernet/adas_channel/adas_adas_nep</NETWORK-ENDPOINT-REF>
+                  </NETWORK-ENDPOINT-REFS>
+                </ETHERNET-COMMUNICATION-CONNECTOR>
+              </CONNECTORS>
+            </ECU-INSTANCE>
+            <ECU-INSTANCE>
+              <SHORT-NAME>CAMF</SHORT-NAME>
+              <ASSOCIATED-COM-I-PDU-GROUP-REFS>
+                <ASSOCIATED-COM-I-PDU-GROUP-REF DEST="I-SIGNAL-I-PDU-GROUP">/VectorAutosarExplorerGeneratedObjects/PDU_GROUP/PduGroup_2a4234ddd32548e1a9d1c8752f638cd7_Rx</ASSOCIATED-COM-I-PDU-GROUP-REF>
+                <ASSOCIATED-COM-I-PDU-GROUP-REF DEST="I-SIGNAL-I-PDU-GROUP">/VectorAutosarExplorerGeneratedObjects/PDU_GROUP/PduGroup_53ca95c340f4479ba4ecf4b04e704d2a_Rx</ASSOCIATED-COM-I-PDU-GROUP-REF>
+              </ASSOCIATED-COM-I-PDU-GROUP-REFS>
+              <COMM-CONTROLLERS>
+                <ETHERNET-COMMUNICATION-CONTROLLER>
+                  <SHORT-NAME>camf_controller</SHORT-NAME>
+                  <ETHERNET-COMMUNICATION-CONTROLLER-VARIANTS>
+                    <ETHERNET-COMMUNICATION-CONTROLLER-CONDITIONAL>
+                      <MAC-UNICAST-ADDRESS>20:00:00:00:01:06</MAC-UNICAST-ADDRESS>
+                    </ETHERNET-COMMUNICATION-CONTROLLER-CONDITIONAL>
+                  </ETHERNET-COMMUNICATION-CONTROLLER-VARIANTS>
+                </ETHERNET-COMMUNICATION-CONTROLLER>
+              </COMM-CONTROLLERS>
+              <CONNECTORS>
+                <ETHERNET-COMMUNICATION-CONNECTOR>
+                  <SHORT-NAME>camf_adas_connector</SHORT-NAME>
+                  <COMM-CONTROLLER-REF DEST="ETHERNET-COMMUNICATION-CONTROLLER">/Vector/ECUs/CAMF/camf_controller</COMM-CONTROLLER-REF>
+                  <ECU-COMM-PORT-INSTANCES>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>pdu_port_out_camf_adas_connector</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <FRAME-PORT>
+                      <SHORT-NAME>framePort_18cafaae8e1a3bfc</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </FRAME-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_e358f25e501046008a603cbe876d565e_Tx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_4e332783d3294c40b0e2c83437e087e9_Tx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_934777868d794e69b64d897425d734fe_Tx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <FRAME-PORT>
+                      <SHORT-NAME>framePort_cebc782724e53fc8</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </FRAME-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_1b0c1b3703f04b01b9f4604c18367d7a_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_5f9c65a1dfe543d1a8ffe2a8fc6bc7e1_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_eeb3515adab64510a5213bbe1b6e9346_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_93e8c703c8904049baffccc6c9df313d_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_20a18118e6f848f687ef897ac3017376_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_e7fa727fd2da4821908cf6eac9f04537_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_2131a5c8e39c4df6b198ffdaaf50a561_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_886fe96168a74d53bb7b2375fa3386f5_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_e7ec367ecef44cdea6023453ebffa41f_Rx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                  </ECU-COMM-PORT-INSTANCES>
+                  <NETWORK-ENDPOINT-REFS>
+                    <NETWORK-ENDPOINT-REF DEST="NETWORK-ENDPOINT">/Vector/Vehicle_Ethernet/adas_channel/camf_adas_nep</NETWORK-ENDPOINT-REF>
+                  </NETWORK-ENDPOINT-REFS>
+                </ETHERNET-COMMUNICATION-CONNECTOR>
+              </CONNECTORS>
+            </ECU-INSTANCE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>Services</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>PDUs</SHORT-NAME>
+          <ELEMENTS>
+            <I-SIGNAL-I-PDU>
+              <SHORT-NAME>TrafficSignDetectionPDU</SHORT-NAME>
+              <LENGTH>18</LENGTH>
+              <I-SIGNAL-TO-PDU-MAPPINGS>
+                <I-SIGNAL-TO-I-PDU-MAPPING>
+                  <SHORT-NAME>ID7</SHORT-NAME>
+                  <I-SIGNAL-REF DEST="I-SIGNAL">/Vector/PDUs/TrafficSignDetectionSerialized</I-SIGNAL-REF>
+                  <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+                  <START-POSITION>0</START-POSITION>
+                </I-SIGNAL-TO-I-PDU-MAPPING>
+              </I-SIGNAL-TO-PDU-MAPPINGS>
+              <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+            </I-SIGNAL-I-PDU>
+            <I-SIGNAL>
+              <SHORT-NAME>TrafficSignDetectionSerialized</SHORT-NAME>
+              <DATA-TRANSFORMATIONS>
+                <DATA-TRANSFORMATION-REF-CONDITIONAL>
+                  <DATA-TRANSFORMATION-REF DEST="DATA-TRANSFORMATION">/Vector/Transformer/transformation_set/SOMEIP</DATA-TRANSFORMATION-REF>
+                </DATA-TRANSFORMATION-REF-CONDITIONAL>
+              </DATA-TRANSFORMATIONS>
+              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Vector/SystemSignals/TrafficSignDetectionSerialized</SYSTEM-SIGNAL-REF>
+              <TRANSFORMATION-I-SIGNAL-PROPSS>
+                <SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS>
+                  <SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS-VARIANTS>
+                    <SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS-CONDITIONAL>
+                      <TRANSFORMER-REF DEST="TRANSFORMATION-TECHNOLOGY">/Vector/Transformer/transformation_set/someip_transformer</TRANSFORMER-REF>
+                      <INTERFACE-VERSION>1</INTERFACE-VERSION>
+                    </SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS-CONDITIONAL>
+                  </SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS-VARIANTS>
+                </SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS>
+              </TRANSFORMATION-I-SIGNAL-PROPSS>
+            </I-SIGNAL>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD>
+              <SHORT-NAME>Temperature</SHORT-NAME>
+              <CATEGORY>LINEAR</CATEGORY>
+              <UNIT-REF DEST="UNIT">/Vector/Units/degree</UNIT-REF>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <COMPU-RATIONAL-COEFFS>
+                      <COMPU-NUMERATOR>
+                        <V>-273.15</V>
+                        <V>0.1</V>
+                      </COMPU-NUMERATOR>
+                      <COMPU-DENOMINATOR>
+                        <V>1</V>
+                      </COMPU-DENOMINATOR>
+                    </COMPU-RATIONAL-COEFFS>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>Speed</SHORT-NAME>
+              <CATEGORY>LINEAR</CATEGORY>
+              <UNIT-REF DEST="UNIT">/Vector/Units/kmh</UNIT-REF>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <COMPU-RATIONAL-COEFFS>
+                      <COMPU-NUMERATOR>
+                        <V>0</V>
+                        <V>0.1</V>
+                      </COMPU-NUMERATOR>
+                      <COMPU-DENOMINATOR>
+                        <V>1</V>
+                      </COMPU-DENOMINATOR>
+                    </COMPU-RATIONAL-COEFFS>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>Distance</SHORT-NAME>
+              <CATEGORY>SCALE_LINEAR_AND_TEXTTABLE</CATEGORY>
+              <UNIT-REF DEST="UNIT">/Vector/Units/meter</UNIT-REF>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <COMPU-RATIONAL-COEFFS>
+                      <COMPU-NUMERATOR>
+                        <V>-1000000</V>
+                        <V>0.1</V>
+                      </COMPU-NUMERATOR>
+                      <COMPU-DENOMINATOR>
+                        <V>1</V>
+                      </COMPU-DENOMINATOR>
+                    </COMPU-RATIONAL-COEFFS>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NoDistance</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>Current</SHORT-NAME>
+              <CATEGORY>LINEAR</CATEGORY>
+              <UNIT-REF DEST="UNIT">/Vector/Units/ampere</UNIT-REF>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <COMPU-RATIONAL-COEFFS>
+                      <COMPU-NUMERATOR>
+                        <V>-1000</V>
+                        <V>0.001</V>
+                      </COMPU-NUMERATOR>
+                      <COMPU-DENOMINATOR>
+                        <V>1</V>
+                      </COMPU-DENOMINATOR>
+                    </COMPU-RATIONAL-COEFFS>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>Power</SHORT-NAME>
+              <CATEGORY>LINEAR</CATEGORY>
+              <UNIT-REF DEST="UNIT">/Vector/Units/kw</UNIT-REF>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <COMPU-RATIONAL-COEFFS>
+                      <COMPU-NUMERATOR>
+                        <V>-1000</V>
+                        <V>0.001</V>
+                      </COMPU-NUMERATOR>
+                      <COMPU-DENOMINATOR>
+                        <V>1</V>
+                      </COMPU-DENOMINATOR>
+                    </COMPU-RATIONAL-COEFFS>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>Capacity</SHORT-NAME>
+              <CATEGORY>LINEAR</CATEGORY>
+              <UNIT-REF DEST="UNIT">/Vector/Units/kwh</UNIT-REF>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <COMPU-RATIONAL-COEFFS>
+                      <COMPU-NUMERATOR>
+                        <V>0</V>
+                        <V>0.001</V>
+                      </COMPU-NUMERATOR>
+                      <COMPU-DENOMINATOR>
+                        <V>1</V>
+                      </COMPU-DENOMINATOR>
+                    </COMPU-RATIONAL-COEFFS>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>signType_cm</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NoObject</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>SpeedLimit30Sign</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>SpeedLimit50Sign</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>SpeedLimit60Sign</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>SpeedLimit70Sign</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>SpeedLimit80Sign</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">6</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>SpeedLimit100Sign</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">7</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">7</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NoLimit80Sign</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">8</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">8</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NoPassingZoneSign</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">9</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">9</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NoPassingZoneEndSign</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">10</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">10</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>HazardSign</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">11</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">11</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>HazardEndSign</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">12</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">12</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>RoadworkSign</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">13</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">13</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>RoadworkEndSign</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>detectionReliability_cm</SHORT-NAME>
+              <UNIT-REF DEST="UNIT">/Vector/Units/detectionReliability_unit</UNIT-REF>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>activate_cm</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>Deactivate</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>Activate</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>activate_result_cm</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>Failed</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>Success</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>frame_rate_cm</SHORT-NAME>
+              <UNIT-REF DEST="UNIT">/Vector/Units/frsec</UNIT-REF>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>Units</SHORT-NAME>
+          <ELEMENTS>
+            <UNIT>
+              <SHORT-NAME>degree</SHORT-NAME>
+              <DISPLAY-NAME>°C</DISPLAY-NAME>
+            </UNIT>
+            <UNIT>
+              <SHORT-NAME>kmh</SHORT-NAME>
+              <DISPLAY-NAME>km/h</DISPLAY-NAME>
+            </UNIT>
+            <UNIT>
+              <SHORT-NAME>meter</SHORT-NAME>
+              <DISPLAY-NAME>m</DISPLAY-NAME>
+            </UNIT>
+            <UNIT>
+              <SHORT-NAME>ampere</SHORT-NAME>
+              <DISPLAY-NAME>A</DISPLAY-NAME>
+            </UNIT>
+            <UNIT>
+              <SHORT-NAME>kw</SHORT-NAME>
+              <DISPLAY-NAME>kW</DISPLAY-NAME>
+            </UNIT>
+            <UNIT>
+              <SHORT-NAME>kwh</SHORT-NAME>
+              <DISPLAY-NAME>kWh</DISPLAY-NAME>
+            </UNIT>
+            <UNIT>
+              <SHORT-NAME>detectionReliability_unit</SHORT-NAME>
+              <DISPLAY-NAME>%</DISPLAY-NAME>
+            </UNIT>
+            <UNIT>
+              <SHORT-NAME>frsec</SHORT-NAME>
+              <DISPLAY-NAME>fr/sec</DISPLAY-NAME>
+            </UNIT>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>SystemSignals</SHORT-NAME>
+          <ELEMENTS>
+            <SYSTEM-SIGNAL>
+              <SHORT-NAME>TrafficSignDetectionSerialized</SHORT-NAME>
+            </SYSTEM-SIGNAL>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>RoutingGroups</SHORT-NAME>
+          <ELEMENTS>
+            <SO-AD-ROUTING-GROUP>
+              <SHORT-NAME>adas_adas_display_info_ceg</SHORT-NAME>
+              <EVENT-GROUP-CONTROL-TYPE>ACTIVATION-UNICAST</EVENT-GROUP-CONTROL-TYPE>
+            </SO-AD-ROUTING-GROUP>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>ApplicationDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <APPLICATION-ARRAY-DATA-TYPE>
+              <SHORT-NAME>DetectedTrafficSigns</SHORT-NAME>
+              <CATEGORY>ARRAY</CATEGORY>
+              <ELEMENT>
+                <SHORT-NAME>DetectedTrafficSign</SHORT-NAME>
+                <CATEGORY>STRUCTURE</CATEGORY>
+                <TYPE-TREF DEST="APPLICATION-RECORD-DATA-TYPE">/Vector/ApplicationDataTypes/DetectedTrafficSign</TYPE-TREF>
+                <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                <MAX-NUMBER-OF-ELEMENTS>3</MAX-NUMBER-OF-ELEMENTS>
+              </ELEMENT>
+            </APPLICATION-ARRAY-DATA-TYPE>
+            <APPLICATION-RECORD-DATA-TYPE>
+              <SHORT-NAME>DetectedTrafficSign</SHORT-NAME>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <ELEMENTS>
+                <APPLICATION-RECORD-ELEMENT>
+                  <SHORT-NAME>signType_dt</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Vector/ApplicationDataTypes/signType_dt</TYPE-TREF>
+                </APPLICATION-RECORD-ELEMENT>
+                <APPLICATION-RECORD-ELEMENT>
+                  <SHORT-NAME>signDistance_dt</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Vector/ApplicationDataTypes/signDistance_dt</TYPE-TREF>
+                </APPLICATION-RECORD-ELEMENT>
+                <APPLICATION-RECORD-ELEMENT>
+                  <SHORT-NAME>detectionReliability_dt</SHORT-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Vector/ApplicationDataTypes/detectionReliability_dt</TYPE-TREF>
+                </APPLICATION-RECORD-ELEMENT>
+              </ELEMENTS>
+            </APPLICATION-RECORD-DATA-TYPE>
+            <APPLICATION-PRIMITIVE-DATA-TYPE>
+              <SHORT-NAME>signType_dt</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <APPLICATION-PRIMITIVE-DATA-TYPE>
+              <SHORT-NAME>signDistance_dt</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <APPLICATION-PRIMITIVE-DATA-TYPE>
+              <SHORT-NAME>detectionReliability_dt</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <APPLICATION-RECORD-DATA-TYPE>
+              <SHORT-NAME>TrafficSignDetection</SHORT-NAME>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <ELEMENTS>
+                <APPLICATION-RECORD-ELEMENT>
+                  <SHORT-NAME>DetectedTrafficSign</SHORT-NAME>
+                  <CATEGORY>STRUCTURE</CATEGORY>
+                  <TYPE-TREF DEST="APPLICATION-ARRAY-DATA-TYPE">/Vector/ApplicationDataTypes/DetectedTrafficSigns</TYPE-TREF>
+                </APPLICATION-RECORD-ELEMENT>
+              </ELEMENTS>
+            </APPLICATION-RECORD-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>DetectedTrafficSigns</SHORT-NAME>
+              <CATEGORY>ARRAY</CATEGORY>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>DetectedTrafficSigns</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <ARRAY-SIZE>3</ARRAY-SIZE>
+                  <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Vector/ImplementationDataTypes/DetectedTrafficSign</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>DetectedTrafficSign</SHORT-NAME>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>SignType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Vector/ImplementationDataTypes/signType_dt</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>DistanceToSign</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Vector/ImplementationDataTypes/signDistance_dt</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Reliability</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Vector/ImplementationDataTypes/detectionReliability_dt</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>signType_dt</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR/BaseTypes/A_UINT8</BASE-TYPE-REF>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/Vector/CompuMethods/signType_cm</COMPU-METHOD-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>signDistance_dt</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR/BaseTypes/A_UINT32</BASE-TYPE-REF>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/Vector/CompuMethods/Distance</COMPU-METHOD-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>detectionReliability_dt</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR/BaseTypes/A_UINT8</BASE-TYPE-REF>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/Vector/CompuMethods/detectionReliability_cm</COMPU-METHOD-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>TrafficSignDetection</SHORT-NAME>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>DetectedTrafficSign</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Vector/ImplementationDataTypes/DetectedTrafficSigns</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>DataTypeMappings</SHORT-NAME>
+          <ELEMENTS>
+            <DATA-TYPE-MAPPING-SET>
+              <SHORT-NAME>DATA_TYPE_MAPPING_SET</SHORT-NAME>
+              <DATA-TYPE-MAPS>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-RECORD-DATA-TYPE">/Vector/ApplicationDataTypes/TrafficSignDetection</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Vector/ImplementationDataTypes/TrafficSignDetection</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-RECORD-DATA-TYPE">/Vector/ApplicationDataTypes/DetectedTrafficSigns</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Vector/ImplementationDataTypes/DetectedTrafficSigns</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-RECORD-DATA-TYPE">/Vector/ApplicationDataTypes/DetectedTrafficSign</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Vector/ImplementationDataTypes/DetectedTrafficSign</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-RECORD-DATA-TYPE">/Vector/ApplicationDataTypes/signType_dt</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Vector/ImplementationDataTypes/signType_dt</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-RECORD-DATA-TYPE">/Vector/ApplicationDataTypes/signDistance_dt</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Vector/ImplementationDataTypes/signDistance_dt</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-RECORD-DATA-TYPE">/Vector/ApplicationDataTypes/detectionReliability_dt</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Vector/ImplementationDataTypes/detectionReliability_dt</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+              </DATA-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>PortInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <SENDER-RECEIVER-INTERFACE>
+              <SHORT-NAME>SenderReceiver</SHORT-NAME>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE>
+                  <SHORT-NAME>TrafficSignDetection</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-RECORD-DATA-TYPE">/Vector/ApplicationDataTypes/TrafficSignDetection</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>SystemsMappings</SHORT-NAME>
+          <ELEMENTS>
+            <SYSTEM>
+              <SHORT-NAME>System</SHORT-NAME>
+              <FIBEX-ELEMENTS>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="ETHERNET-FRAME">/VectorAutosarExplorerGeneratedObjects/FRAME/New_Frame</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/New_PDU1</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/New_PDU2</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/New_PDU3</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/New_PDU4</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/New_PDU</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/New_PDU_1</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/New_PDU_2</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/New_PDU10</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/New_PDU_11</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="N-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/New_Frame_NewPDU</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="GENERAL-PURPOSE-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/New_Frame_NewPDU_1</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="CONTAINER-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/New_Frame_NewPDU_2</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="ECU-INSTANCE">/VectorAutosarExplorerGeneratedObjects/ECU_INSTANCES/ECU1</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="ETHERNET-FRAME">/VectorAutosarExplorerGeneratedObjects/FRAME/Frame1</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal1</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal2</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/PDU1</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/VectorAutosarExplorerGeneratedObjects/PDU_GROUP/PduGroup_5b005a25d0eb420ca24c77d4f05cecf1_Tx</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/VectorAutosarExplorerGeneratedObjects/PDU_GROUP/PduGroup_2a4234ddd32548e1a9d1c8752f638cd7_Rx</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/VectorAutosarExplorerGeneratedObjects/PDU_GROUP/PduGroup_955dbd4975c0465a895ed4df23deb8e9_Rx</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal3</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal5</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal4</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="GENERAL-PURPOSE-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/PDU2</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/PDU4</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="CONTAINER-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/PDU3</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/VectorAutosarExplorerGeneratedObjects/PDU_GROUP/PduGroup_e4aa028064ee4dd3846bd1728a8e4163_Tx</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/VectorAutosarExplorerGeneratedObjects/PDU_GROUP/PduGroup_53ca95c340f4479ba4ecf4b04e704d2a_Rx</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/VectorAutosarExplorerGeneratedObjects/PDU_GROUP/PduGroup_63785361f2144506b8d31587684c4f85_Rx</FIBEX-ELEMENT-REF>
+                </FIBEX-ELEMENT-REF-CONDITIONAL>
+              </FIBEX-ELEMENTS>
+              <MAPPINGS>
+                <SYSTEM-MAPPING>
+                  <SHORT-NAME>SystemMapping</SHORT-NAME>
+                  <DATA-MAPPINGS>
+                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                      <DATA-ELEMENT-IREF>
+                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Vector/PortInterfaces/SenderReceiver/TrafficSignDetection</TARGET-DATA-PROTOTYPE-REF>
+                      </DATA-ELEMENT-IREF>
+                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Vector/SystemSignals/TrafficSignDetectionSerialized</SYSTEM-SIGNAL-REF>
+                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                  </DATA-MAPPINGS>
+                </SYSTEM-MAPPING>
+              </MAPPINGS>
+            </SYSTEM>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>Transformer</SHORT-NAME>
+          <ELEMENTS>
+            <DATA-TRANSFORMATION-SET>
+              <SHORT-NAME>transformation_set</SHORT-NAME>
+              <DATA-TRANSFORMATIONS>
+                <DATA-TRANSFORMATION>
+                  <SHORT-NAME>SOMEIP</SHORT-NAME>
+                  <TRANSFORMER-CHAIN-REFS>
+                    <TRANSFORMER-CHAIN-REF DEST="TRANSFORMATION-TECHNOLOGY">/Vector/Transformer/transformation_set/someip_transformer</TRANSFORMER-CHAIN-REF>
+                  </TRANSFORMER-CHAIN-REFS>
+                </DATA-TRANSFORMATION>
+              </DATA-TRANSFORMATIONS>
+              <TRANSFORMATION-TECHNOLOGYS>
+                <TRANSFORMATION-TECHNOLOGY>
+                  <SHORT-NAME>someip_transformer</SHORT-NAME>
+                  <PROTOCOL>SOMEIP</PROTOCOL>
+                  <TRANSFORMATION-DESCRIPTIONS>
+                    <SOMEIP-TRANSFORMATION-DESCRIPTION>
+                      <ALIGNMENT>8</ALIGNMENT>
+                      <BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</BYTE-ORDER>
+                      <INTERFACE-VERSION>1</INTERFACE-VERSION>
+                    </SOMEIP-TRANSFORMATION-DESCRIPTION>
+                  </TRANSFORMATION-DESCRIPTIONS>
+                  <TRANSFORMER-CLASS>SERIALIZER</TRANSFORMER-CLASS>
+                  <VERSION>1</VERSION>
+                </TRANSFORMATION-TECHNOLOGY>
+              </TRANSFORMATION-TECHNOLOGYS>
+            </DATA-TRANSFORMATION-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>BaseTypes</SHORT-NAME>
+          <ELEMENTS>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>A_UINT8</SHORT-NAME>
+              <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+            </SW-BASE-TYPE>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>A_UINT8</SHORT-NAME>
+              <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+            </SW-BASE-TYPE>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>A_UINT16</SHORT-NAME>
+              <BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
+              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+            </SW-BASE-TYPE>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>A_UINT32</SHORT-NAME>
+              <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
+              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+            </SW-BASE-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>VectorAutosarExplorerGeneratedObjects</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>PDUS</SHORT-NAME>
+          <ELEMENTS>
+            <DCM-I-PDU>
+              <SHORT-NAME>New_PDU1</SHORT-NAME>
+              <LENGTH>8</LENGTH>
+            </DCM-I-PDU>
+            <DCM-I-PDU>
+              <SHORT-NAME>New_PDU2</SHORT-NAME>
+              <LENGTH>8</LENGTH>
+              <DIAG-PDU-TYPE>DIAG-REQUEST</DIAG-PDU-TYPE>
+            </DCM-I-PDU>
+            <DCM-I-PDU>
+              <SHORT-NAME>New_PDU3</SHORT-NAME>
+              <LENGTH>8</LENGTH>
+              <DIAG-PDU-TYPE>DIAG-RESPONSE</DIAG-PDU-TYPE>
+            </DCM-I-PDU>
+            <DCM-I-PDU>
+              <SHORT-NAME>New_PDU4</SHORT-NAME>
+              <LENGTH>8</LENGTH>
+            </DCM-I-PDU>
+            <DCM-I-PDU>
+              <SHORT-NAME>New_PDU</SHORT-NAME>
+              <LENGTH>8</LENGTH>
+            </DCM-I-PDU>
+            <DCM-I-PDU>
+              <SHORT-NAME>New_PDU_1</SHORT-NAME>
+              <LENGTH>8</LENGTH>
+            </DCM-I-PDU>
+            <DCM-I-PDU>
+              <SHORT-NAME>New_PDU_2</SHORT-NAME>
+              <LENGTH>8</LENGTH>
+            </DCM-I-PDU>
+            <DCM-I-PDU>
+              <SHORT-NAME>New_PDU10</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="FOR-ALL">FRFDS</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">EE</L-2>
+              </DESC>
+              <LENGTH>8</LENGTH>
+              <DIAG-PDU-TYPE>DIAG-REQUEST</DIAG-PDU-TYPE>
+            </DCM-I-PDU>
+            <DCM-I-PDU>
+              <SHORT-NAME>New_PDU_11</SHORT-NAME>
+              <LENGTH>8</LENGTH>
+              <DIAG-PDU-TYPE>DIAG-RESPONSE</DIAG-PDU-TYPE>
+            </DCM-I-PDU>
+            <N-PDU>
+              <SHORT-NAME>New_Frame_NewPDU</SHORT-NAME>
+              <LENGTH>16</LENGTH>
+            </N-PDU>
+            <GENERAL-PURPOSE-PDU>
+              <SHORT-NAME>New_Frame_NewPDU_1</SHORT-NAME>
+              <LENGTH>8</LENGTH>
+            </GENERAL-PURPOSE-PDU>
+            <CONTAINER-I-PDU>
+              <SHORT-NAME>New_Frame_NewPDU_2</SHORT-NAME>
+              <LENGTH>8</LENGTH>
+              <CONTAINER-TIMEOUT>0</CONTAINER-TIMEOUT>
+              <CONTAINER-TRIGGER>DEFAULT-TRIGGER</CONTAINER-TRIGGER>
+              <HEADER-TYPE>LONG-HEADER</HEADER-TYPE>
+              <RX-ACCEPT-CONTAINED-I-PDU>ACCEPT-CONFIGURED</RX-ACCEPT-CONTAINED-I-PDU>
+              <THRESHOLD-SIZE>0</THRESHOLD-SIZE>
+            </CONTAINER-I-PDU>
+            <I-SIGNAL-I-PDU>
+              <SHORT-NAME>PDU1</SHORT-NAME>
+              <LENGTH>2</LENGTH>
+              <I-SIGNAL-TO-PDU-MAPPINGS>
+                <I-SIGNAL-TO-I-PDU-MAPPING>
+                  <SHORT-NAME>SignalPduMapping_09239fb4682443d8</SHORT-NAME>
+                  <I-SIGNAL-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal1</I-SIGNAL-REF>
+                  <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+                  <START-POSITION>0</START-POSITION>
+                </I-SIGNAL-TO-I-PDU-MAPPING>
+                <I-SIGNAL-TO-I-PDU-MAPPING>
+                  <SHORT-NAME>SignalPduMapping_867a89628f7b9fab</SHORT-NAME>
+                  <I-SIGNAL-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal2</I-SIGNAL-REF>
+                  <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+                  <START-POSITION>8</START-POSITION>
+                </I-SIGNAL-TO-I-PDU-MAPPING>
+              </I-SIGNAL-TO-PDU-MAPPINGS>
+            </I-SIGNAL-I-PDU>
+            <GENERAL-PURPOSE-PDU>
+              <SHORT-NAME>PDU2</SHORT-NAME>
+              <LENGTH>1</LENGTH>
+            </GENERAL-PURPOSE-PDU>
+            <I-SIGNAL-I-PDU>
+              <SHORT-NAME>PDU4</SHORT-NAME>
+              <LENGTH>2</LENGTH>
+              <I-SIGNAL-TO-PDU-MAPPINGS>
+                <I-SIGNAL-TO-I-PDU-MAPPING>
+                  <SHORT-NAME>SignalPduMapping_cc49a23e116549a7</SHORT-NAME>
+                  <I-SIGNAL-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal3</I-SIGNAL-REF>
+                  <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+                  <START-POSITION>0</START-POSITION>
+                </I-SIGNAL-TO-I-PDU-MAPPING>
+                <I-SIGNAL-TO-I-PDU-MAPPING>
+                  <SHORT-NAME>SignalPduMapping_97a27961b2ef803e</SHORT-NAME>
+                  <I-SIGNAL-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal5</I-SIGNAL-REF>
+                  <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+                  <START-POSITION>8</START-POSITION>
+                </I-SIGNAL-TO-I-PDU-MAPPING>
+                <I-SIGNAL-TO-I-PDU-MAPPING>
+                  <SHORT-NAME>SignalPduMapping_b5d2990cf0ba6733</SHORT-NAME>
+                  <I-SIGNAL-REF DEST="I-SIGNAL">/VectorAutosarExplorerGeneratedObjects/I_SIGNALS/Signal4</I-SIGNAL-REF>
+                  <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+                  <START-POSITION>10</START-POSITION>
+                </I-SIGNAL-TO-I-PDU-MAPPING>
+              </I-SIGNAL-TO-PDU-MAPPINGS>
+            </I-SIGNAL-I-PDU>
+            <CONTAINER-I-PDU>
+              <SHORT-NAME>PDU3</SHORT-NAME>
+              <LENGTH>1</LENGTH>
+              <CONTAINER-TIMEOUT>0</CONTAINER-TIMEOUT>
+              <CONTAINER-TRIGGER>DEFAULT-TRIGGER</CONTAINER-TRIGGER>
+              <HEADER-TYPE>LONG-HEADER</HEADER-TYPE>
+              <RX-ACCEPT-CONTAINED-I-PDU>ACCEPT-CONFIGURED</RX-ACCEPT-CONTAINED-I-PDU>
+              <THRESHOLD-SIZE>0</THRESHOLD-SIZE>
+            </CONTAINER-I-PDU>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>I_SIGNALS</SHORT-NAME>
+          <ELEMENTS>
+            <I-SIGNAL>
+              <SHORT-NAME>Signal1</SHORT-NAME>
+              <DATA-TYPE-POLICY>OVERRIDE</DATA-TYPE-POLICY>
+              <LENGTH>1</LENGTH>
+              <NETWORK-REPRESENTATION-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR/BaseTypes/A_UINT16</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </NETWORK-REPRESENTATION-PROPS>
+              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/VectorAutosarExplorerGeneratedObjects/SYSTEM_SIGNALS/Signal1_e744eb018b81d704</SYSTEM-SIGNAL-REF>
+            </I-SIGNAL>
+            <I-SIGNAL>
+              <SHORT-NAME>Signal2</SHORT-NAME>
+              <DATA-TYPE-POLICY>OVERRIDE</DATA-TYPE-POLICY>
+              <LENGTH>2</LENGTH>
+              <NETWORK-REPRESENTATION-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR/BaseTypes/A_UINT16</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </NETWORK-REPRESENTATION-PROPS>
+              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/VectorAutosarExplorerGeneratedObjects/SYSTEM_SIGNALS/Signal2_13904b2da6ad732d</SYSTEM-SIGNAL-REF>
+            </I-SIGNAL>
+            <I-SIGNAL>
+              <SHORT-NAME>Signal3</SHORT-NAME>
+              <DATA-TYPE-POLICY>OVERRIDE</DATA-TYPE-POLICY>
+              <LENGTH>8</LENGTH>
+              <NETWORK-REPRESENTATION-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR/BaseTypes/A_UINT16</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </NETWORK-REPRESENTATION-PROPS>
+              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/VectorAutosarExplorerGeneratedObjects/SYSTEM_SIGNALS/Signal3_5e70ae07171dc133</SYSTEM-SIGNAL-REF>
+            </I-SIGNAL>
+            <I-SIGNAL>
+              <SHORT-NAME>Signal5</SHORT-NAME>
+              <DATA-TYPE-POLICY>OVERRIDE</DATA-TYPE-POLICY>
+              <LENGTH>2</LENGTH>
+              <NETWORK-REPRESENTATION-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR/BaseTypes/A_UINT16</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </NETWORK-REPRESENTATION-PROPS>
+              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/VectorAutosarExplorerGeneratedObjects/SYSTEM_SIGNALS/Signal5_6cdd81574a2e7156</SYSTEM-SIGNAL-REF>
+            </I-SIGNAL>
+            <I-SIGNAL>
+              <SHORT-NAME>Signal4</SHORT-NAME>
+              <DATA-TYPE-POLICY>OVERRIDE</DATA-TYPE-POLICY>
+              <LENGTH>1</LENGTH>
+              <NETWORK-REPRESENTATION-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR/BaseTypes/A_UINT16</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </NETWORK-REPRESENTATION-PROPS>
+              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/VectorAutosarExplorerGeneratedObjects/SYSTEM_SIGNALS/Signal4_acf297226771a036</SYSTEM-SIGNAL-REF>
+            </I-SIGNAL>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>ECU_INSTANCES</SHORT-NAME>
+          <ELEMENTS>
+            <ECU-INSTANCE>
+              <SHORT-NAME>New_ECU</SHORT-NAME>
+              <DIAGNOSTIC-ADDRESS>0</DIAGNOSTIC-ADDRESS>
+            </ECU-INSTANCE>
+            <ECU-INSTANCE>
+              <SHORT-NAME>ECU1</SHORT-NAME>
+              <ASSOCIATED-COM-I-PDU-GROUP-REFS>
+                <ASSOCIATED-COM-I-PDU-GROUP-REF DEST="I-SIGNAL-I-PDU-GROUP">/VectorAutosarExplorerGeneratedObjects/PDU_GROUP/PduGroup_5b005a25d0eb420ca24c77d4f05cecf1_Tx</ASSOCIATED-COM-I-PDU-GROUP-REF>
+                <ASSOCIATED-COM-I-PDU-GROUP-REF DEST="I-SIGNAL-I-PDU-GROUP">/VectorAutosarExplorerGeneratedObjects/PDU_GROUP/PduGroup_e4aa028064ee4dd3846bd1728a8e4163_Tx</ASSOCIATED-COM-I-PDU-GROUP-REF>
+              </ASSOCIATED-COM-I-PDU-GROUP-REFS>
+              <COMM-CONTROLLERS>
+                <ETHERNET-COMMUNICATION-CONTROLLER>
+                  <SHORT-NAME>Controller_ECU1_28c435cbc1a25fdd</SHORT-NAME>
+                  <ETHERNET-COMMUNICATION-CONTROLLER-VARIANTS>
+                    <ETHERNET-COMMUNICATION-CONTROLLER-CONDITIONAL />
+                  </ETHERNET-COMMUNICATION-CONTROLLER-VARIANTS>
+                </ETHERNET-COMMUNICATION-CONTROLLER>
+              </COMM-CONTROLLERS>
+              <CONNECTORS>
+                <ETHERNET-COMMUNICATION-CONNECTOR>
+                  <SHORT-NAME>Connector_ECU1_4cf9cc795f85d190</SHORT-NAME>
+                  <COMM-CONTROLLER-REF DEST="ETHERNET-COMMUNICATION-CONTROLLER">/VectorAutosarExplorerGeneratedObjects/ECU_INSTANCES/ECU1/Controller_ECU1_28c435cbc1a25fdd</COMM-CONTROLLER-REF>
+                  <ECU-COMM-PORT-INSTANCES>
+                    <FRAME-PORT>
+                      <SHORT-NAME>framePort_e67b608a2bb464ce</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </FRAME-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_2520c0485b6143ef92680726d81e2950_Tx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_06e4599ba34c43e198fe1a59a9ea2efc_Tx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_064ac8d0611e41f19b3b344b591bcc1b_Tx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_209a384453854a3680e3cc96129e598c_Tx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_dd443530ba404ebfaaf992ee7ebf7dcb_Tx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-PDU-PORT>
+                      <SHORT-NAME>PP_9a425c6e376b4f02a6495a6770f147a9_Tx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </I-PDU-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_4f1e3bc60ef14bc8ad1c7d2296870d14_Tx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_dff5c7984ddc47968098e803700d8689_Tx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                    <I-SIGNAL-PORT>
+                      <SHORT-NAME>SP_4d53d8a3afe443d6961dab7fee16a214_Tx</SHORT-NAME>
+                      <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                    </I-SIGNAL-PORT>
+                  </ECU-COMM-PORT-INSTANCES>
+                </ETHERNET-COMMUNICATION-CONNECTOR>
+              </CONNECTORS>
+              <DIAGNOSTIC-ADDRESS>0</DIAGNOSTIC-ADDRESS>
+            </ECU-INSTANCE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>FRAME</SHORT-NAME>
+          <ELEMENTS>
+            <ETHERNET-FRAME>
+              <SHORT-NAME>New_Frame</SHORT-NAME>
+              <FRAME-LENGTH>800</FRAME-LENGTH>
+            </ETHERNET-FRAME>
+            <ETHERNET-FRAME>
+              <SHORT-NAME>Frame1</SHORT-NAME>
+              <FRAME-LENGTH>8</FRAME-LENGTH>
+              <PDU-TO-FRAME-MAPPINGS>
+                <PDU-TO-FRAME-MAPPING>
+                  <SHORT-NAME>PduToFrameMapping_6d6e7f7a97259e7b</SHORT-NAME>
+                  <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+                  <PDU-REF DEST="I-SIGNAL-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/PDU1</PDU-REF>
+                  <START-POSITION>0</START-POSITION>
+                </PDU-TO-FRAME-MAPPING>
+                <PDU-TO-FRAME-MAPPING>
+                  <SHORT-NAME>PduToFrameMapping_ea92ddc9a6b52ada</SHORT-NAME>
+                  <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+                  <PDU-REF DEST="GENERAL-PURPOSE-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/PDU2</PDU-REF>
+                  <START-POSITION>16</START-POSITION>
+                </PDU-TO-FRAME-MAPPING>
+                <PDU-TO-FRAME-MAPPING>
+                  <SHORT-NAME>PduToFrameMapping_4ad2b2f94320bdd1</SHORT-NAME>
+                  <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+                  <PDU-REF DEST="CONTAINER-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/PDU3</PDU-REF>
+                  <START-POSITION>24</START-POSITION>
+                </PDU-TO-FRAME-MAPPING>
+                <PDU-TO-FRAME-MAPPING>
+                  <SHORT-NAME>PduToFrameMapping_8c1c257a73d0140a</SHORT-NAME>
+                  <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+                  <PDU-REF DEST="I-SIGNAL-I-PDU">/VectorAutosarExplorerGeneratedObjects/PDUS/PDU4</PDU-REF>
+                  <START-POSITION>32</START-POSITION>
+                </PDU-TO-FRAME-MAPPING>
+              </PDU-TO-FRAME-MAPPINGS>
+            </ETHERNET-FRAME>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>BASE_TYPES</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>SYSTEM_SIGNALS</SHORT-NAME>
+          <ELEMENTS>
+            <SYSTEM-SIGNAL>
+              <SHORT-NAME>Signal1_e744eb018b81d704</SHORT-NAME>
+              <PHYSICAL-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL />
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </PHYSICAL-PROPS>
+            </SYSTEM-SIGNAL>
+            <SYSTEM-SIGNAL>
+              <SHORT-NAME>Signal2_13904b2da6ad732d</SHORT-NAME>
+              <PHYSICAL-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL />
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </PHYSICAL-PROPS>
+            </SYSTEM-SIGNAL>
+            <SYSTEM-SIGNAL>
+              <SHORT-NAME>Signal3_5e70ae07171dc133</SHORT-NAME>
+              <PHYSICAL-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL />
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </PHYSICAL-PROPS>
+            </SYSTEM-SIGNAL>
+            <SYSTEM-SIGNAL>
+              <SHORT-NAME>Signal5_6cdd81574a2e7156</SHORT-NAME>
+              <PHYSICAL-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL />
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </PHYSICAL-PROPS>
+            </SYSTEM-SIGNAL>
+            <SYSTEM-SIGNAL>
+              <SHORT-NAME>Signal4_acf297226771a036</SHORT-NAME>
+              <PHYSICAL-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL />
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </PHYSICAL-PROPS>
+            </SYSTEM-SIGNAL>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>PDU_GROUP</SHORT-NAME>
+          <ELEMENTS>
+            <I-SIGNAL-I-PDU-GROUP>
+              <SHORT-NAME>PduGroup_5b005a25d0eb420ca24c77d4f05cecf1_Tx</SHORT-NAME>
+              <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+            </I-SIGNAL-I-PDU-GROUP>
+            <I-SIGNAL-I-PDU-GROUP>
+              <SHORT-NAME>PduGroup_2a4234ddd32548e1a9d1c8752f638cd7_Rx</SHORT-NAME>
+              <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+            </I-SIGNAL-I-PDU-GROUP>
+            <I-SIGNAL-I-PDU-GROUP>
+              <SHORT-NAME>PduGroup_955dbd4975c0465a895ed4df23deb8e9_Rx</SHORT-NAME>
+              <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+            </I-SIGNAL-I-PDU-GROUP>
+            <I-SIGNAL-I-PDU-GROUP>
+              <SHORT-NAME>PduGroup_e4aa028064ee4dd3846bd1728a8e4163_Tx</SHORT-NAME>
+              <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+            </I-SIGNAL-I-PDU-GROUP>
+            <I-SIGNAL-I-PDU-GROUP>
+              <SHORT-NAME>PduGroup_53ca95c340f4479ba4ecf4b04e704d2a_Rx</SHORT-NAME>
+              <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+            </I-SIGNAL-I-PDU-GROUP>
+            <I-SIGNAL-I-PDU-GROUP>
+              <SHORT-NAME>PduGroup_63785361f2144506b8d31587684c4f85_Rx</SHORT-NAME>
+              <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+            </I-SIGNAL-I-PDU-GROUP>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
