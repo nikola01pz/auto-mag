@@ -1,0 +1,39 @@
+/*@!Encoding:1250*/
+includes
+{
+  
+}
+
+variables
+{
+  
+}
+
+void MainTest()
+{
+  tcsEngineSwitchOnState();
+  tcsEngineSwitchOffState();
+}
+
+testcase tcsEngineSwitchOnState()
+{
+  if(testWaitForSignalMatch(OnOff, 1, 100) == 1)
+  {
+    testStepPass("EngineState", "engine is on");
+  } else 
+  {
+    testStepFail("EngineState", "engine is not turned on");
+  }
+}
+
+testcase tcsEngineSwitchOffState()
+{
+  if (testWaitForSignalMatch(OnOff, 0, 15000) == 1)
+  {
+    testStepPass("EngineState", "engine is off");
+  } else 
+  {
+    testStepFail("EngineState", "engine is not turned off");
+  }
+}
+

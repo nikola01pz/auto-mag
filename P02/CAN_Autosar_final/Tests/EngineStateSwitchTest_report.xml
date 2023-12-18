@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<testmodule starttime="2023-12-18 14:56:31" timestamp="   1.050000" verdicts="2_basic" measurementid="9544f82a-11fd-4e12-9a8c-406c37a76494">
+  <testcase starttime="2023-12-18 14:56:31" timestamp="   1.050000">
+    <teststep timestamp="   1.100132" level="1" type="auto" ident="Resume reason" result="na">Resumed on signal &apos;Signal:CAN1/Easy/EngineState/OnOff&apos; Elapsed time=50.132ms (max=100ms)</teststep>
+    <teststep timestamp="   1.100132" level="0" type="user" ident="EngineState" result="pass">engine is on</teststep>
+    <verdict time="2023-12-18 14:56:31" timestamp="   1.100132" endtime="2023-12-18 14:56:31" endtimestamp="   1.100132" result="pass" />
+    <title>tcsEngineSwitchOnState</title>
+  </testcase>
+  <testcase starttime="2023-12-18 14:56:31" timestamp="   1.100132">
+    <teststep timestamp="   8.900134" level="1" type="auto" ident="Resume reason" result="na">Resumed on signal &apos;Signal:CAN1/Easy/EngineState/OnOff&apos; Elapsed time=7800ms (max=15000ms)</teststep>
+    <teststep timestamp="   8.900134" level="0" type="user" ident="EngineState" result="pass">engine is off</teststep>
+    <verdict time="2023-12-18 14:56:39" timestamp="   8.900134" endtime="2023-12-18 14:56:39" endtimestamp="   8.900134" result="pass" />
+    <title>tcsEngineSwitchOffState</title>
+  </testcase>
+  <verdict time="2023-12-18 14:56:39" timestamp="   8.900134" endtime="2023-12-18 14:56:39" endtimestamp="   8.900134" result="pass" />
+  <title>EngineStateSwitchTest</title>
+  <testlogfiles>
+  </testlogfiles>
+  <engineer>
+    <xinfo>
+      <name>Windows Login Name</name>
+      <description>student</description>
+    </xinfo>
+  </engineer>
+  <testsetup>
+    <xinfo>
+      <name>Version</name>
+      <description>CANoe.J1939.CAN.LIN.FlexRay.Ethernet.Car2x.AMD/XCP /pro 14.0.83</description>
+    </xinfo>
+    <xinfo>
+      <name>Configuration</name>
+      <description>C:\Users\student\Desktop\AutoMAG-istvanic\P02\CAN_Autosar_final\CAN_Autosar_Final.cfg</description>
+    </xinfo>
+    <xinfo>
+      <name>Database Easy on Vehicle_control</name>
+      <description>C:\Users\student\Desktop\AutoMAG-istvanic\P02\CAN_Autosar_final\Database\Easy2.arxml (2016-02-23 15:41:34)</description>
+    </xinfo>
+    <xinfo>
+      <name>Test Module Name</name>
+      <description>EngineStateSwitchTest</description>
+    </xinfo>
+    <xinfo>
+      <name>Test Module File</name>
+      <description>C:\Users\student\Desktop\AutoMAG-istvanic\P02\CAN_Autosar_final\Tests\EngineStateSwitchTest.can</description>
+    </xinfo>
+    <xinfo>
+      <name>Last modification of Test Module File</name>
+      <description>2023-12-18, 14:41:29</description>
+    </xinfo>
+    <xinfo>
+      <name>Windows Computer Name</name>
+      <description>B2PC08</description>
+    </xinfo>
+    <xinfo>
+      <name>Nodelayer Module CANoeILNLVector</name>
+      <description>CANoe Interaction Layer NL (Vector) Version 3.17.91 (Sep 11 2020 15:35:44) , C:\Program Files\Vector CANoe 14\Exec32\CANoeILNLVector.dll</description>
+    </xinfo>
+    <xinfo>
+      <name>Nodelayer Module J1939TestServiceLibraryNL</name>
+      <description>J1939 Test Service Library for CANoe, Version 14.0.83.0, C:\Program Files\Vector CANoe 14\Exec32\J1939TestServiceLibraryNL.dll</description>
+    </xinfo>
+  </testsetup>
+</testmodule>
+<!--footprint="7db87478a8c4a12a15a6920e7153a20f" version="1"-->

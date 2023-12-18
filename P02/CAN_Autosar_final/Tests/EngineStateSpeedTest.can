@@ -1,0 +1,27 @@
+/*@!Encoding:1250*/
+includes
+{
+  
+}
+
+variables
+{
+  long engineSpeedSys = 0;
+}
+
+void MainTest()
+{
+  tscEngineSpeedState();
+}
+
+testcase tscEngineSpeedState()
+{
+  
+  if (testWaitForSignalMatch(EngineSpeed, @sysvar::Engine::EngineSpeedEntry, 2000) == 1)
+  {
+    testStepPass("EngineSpeed", "signal and sysvar matched");
+  } else 
+  {
+    testStepFail("EngineSpeed", "speeds are not matched");
+  }
+}

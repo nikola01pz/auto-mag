@@ -1,0 +1,38 @@
+/*@!Encoding:1250*/
+includes
+{
+  
+}
+
+variables
+{
+  
+}
+
+void MainTest()
+{
+  tscHeadLightsOn();
+  tscHeadLightsOff();
+}
+
+testcase tscHeadLightsOn()
+{
+  if (testWaitForSignalMatch(sysvar::Lights::LightDisplay, 4, 2000) == 1)
+  {
+    testStepPass("EngineSpeed", "signal and sysvar matched, headlights on");
+  } else 
+  {
+    testStepFail("EngineSpeed", "values not matched");
+  }
+}
+
+testcase tscHeadLightsOff()
+{
+  if (testWaitForSignalMatch(sysvar::Lights::LightDisplay, 0, 2000) == 1)
+  {
+    testStepPass("EngineSpeed", "signal and sysvar matched, headlights off");
+  } else 
+  {
+    testStepFail("EngineSpeed", "values not matched");
+  }
+}
