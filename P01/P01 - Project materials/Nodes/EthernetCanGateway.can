@@ -1,0 +1,161 @@
+/*@!Encoding:1252*/
+
+variables
+{
+  //
+  // Constants
+  //
+  
+  const WORD kPort         = 23; // UDP port number for instance
+  const WORD kRxBufferSize = 1500;
+  const WORD kTxBufferSize = 1500;
+  
+  //
+  // Structure of UDP payload
+  //
+  
+  _align(1) struct CANData
+  {
+    BYTE  dlc;
+    BYTE  flags; // Bit 7 - Frame type (0 = standard, 1 = extended)
+                 // Bit 6 - RTR bit ('1' = RTR bit is set)
+    DWORD canId;
+    BYTE  canData[8];
+  };
+  
+  //
+  // Global variables
+  //
+  
+  UdpSocket gSocket;
+  CHAR      gRxBuffer[kRxBufferSize];
+  CHAR      gTxBuffer[kTxBufferSize];
+  DWORD     gOwnAddress;
+  DWORD     gModuleAddress= 0xFFFFFFFF; // default is the broadcast address 255.255.255.255  and the TCP/IP stack will build the Network broadcast address
+}
+
+//
+// Measurement start handler
+//
+
+on start
+{
+  DWORD addresses[1];
+  
+  // get own IP address of the Windows TCP/IP stack
+  IpGetAdapterAddress( 1, addresses, elcount(addresses) );
+  gOwnAddress = addresses[0];
+  
+  // open UDP socket
+  gSocket = UdpSocket::Open( 0, kPort ); 
+  
+  if (gSocket.GetLastSocketError() != 0)
+  {
+    write( "<%BASE_FILE_NAME%> Open UDP socket failed, result %d. Measurement stopped!", gSocket.GetLastSocketError() );
+    stop();
+    return;
+  }
+
+  if (gSocket.ReceiveFrom( gRxBuffer, elcount(gRxBuffer) ) != 0)
+  {
+    if (gSocket.GetLastSocketError() != 997) // ignore pending IO operation
+    {
+      write( "<%BASE_FILE_NAME%> UDPReceive failed, result %d. Measurement stopped!", gSocket.GetLastSocketError() );
+      stop();
+      return;
+    }
+  }
+
+}
+
+//
+// On receive UDP data handler using CAPL Callback 
+//
+
+void OnUdpReceiveFrom( dword socket, long result, dword address, dword port, char buffer[], dword size)
+{
+  DWORD          dataOffset;
+  struct CANData canData;
+  message *      canMsg;
+  
+  if (address == gOwnAddress) return; // ignore own broadcasts
+  
+  //
+  // Store IP address of module to reach
+  //
+  
+  if (gModuleAddress == 0)
+  {
+    gModuleAddress = address;
+  }
+  
+  //
+  // Handle received data
+  //
+  
+  dataOffset = 0;
+  while (dataOffset + __size_of(struct CANData) <= size)
+  {
+    memcpy( canData, buffer, dataOffset );
+    
+    canMsg.id      = (canData.canId & 0x1FFFFFFF) | ((canData.flags & 0x80) ? 0x80000000 : 0);
+    canMsg.dlc     = canData.dlc & 0x0f;
+    canMsg.rtr     = ((canData.flags & 0x40) ? 1 : 0);
+    canMsg.byte(0) = canData.canData[0];
+    canMsg.byte(1) = canData.canData[1];
+    canMsg.byte(2) = canData.canData[2];
+    canMsg.byte(3) = canData.canData[3];
+    canMsg.byte(4) = canData.canData[4];
+    canMsg.byte(5) = canData.canData[5];
+    canMsg.byte(6) = canData.canData[6];
+    canMsg.byte(7) = canData.canData[7];
+    
+    output( canMsg );
+   
+    dataOffset += __size_of(struct CANData);
+  }
+  
+
+  //
+  // Receive more data
+  //
+  if (gSocket.ReceiveFrom( gRxBuffer, elcount(gRxBuffer) ) != 0)
+  {
+    if (gSocket.GetLastSocketError() != 997) // ignore pending IO operation
+    {
+      write( "<%BASE_FILE_NAME%> UDPReceive failed, result %d. Measurement stopped!", gSocket.GetLastSocketError() );
+      stop();
+      return;
+    }
+  }
+}
+
+//
+// Handler for CAN messages
+//
+
+on message *
+{
+  int i;
+  struct CANData canData;
+  
+  if ((this.dir == RX) && (gModuleAddress != 0))
+  {
+    canData.canId = this.id & 0x1FFFFFFF;
+    canData.flags = ((this.id & 0x80000000) ? 0x80 : 0x00) | ((this.rtr == 1) ? 0x40 : 0x00);
+    canData.dlc   = this.dlc;
+    
+    for( i = 0; i < 8; i++ )
+    {
+      canData.canData[i] = (i < this.dlc) ? this.byte(i) : 0;
+    }
+    
+    memcpy( gTxBuffer, canData );
+    
+    gSocket.SendTo( gModuleAddress, kPort, gTxBuffer, __size_of(struct CANData) );
+  }
+  else if (gModuleAddress == 0)
+  {
+    write( "<%BASE_FILE_NAME%> Tx not possible. Module to reach must send packets first." ); //Server simulation
+  }
+}
