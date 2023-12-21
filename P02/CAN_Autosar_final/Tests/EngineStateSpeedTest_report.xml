@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<testmodule starttime="2023-12-18 16:49:01" timestamp="  10.862218" verdicts="2_basic" measurementid="a1ae3f62-2e6c-4a3e-942d-3c3d8c4addda">
-  <testcase starttime="2023-12-18 16:49:01" timestamp="  10.862218">
-    <teststep timestamp="  10.900132" level="1" type="auto" ident="Resume reason" result="na">Resumed on signal &apos;Signal:CAN1/Easy/EngineState/EngineSpeed&apos; Elapsed time=37.914ms (max=2000ms)</teststep>
-    <teststep timestamp="  10.900132" level="0" type="user" ident="EngineSpeed" result="pass">signal and sysvar matched</teststep>
-    <verdict time="2023-12-18 16:49:01" timestamp="  10.900132" endtime="2023-12-18 16:49:01" endtimestamp="  10.900132" result="pass" />
+<testmodule starttime="2023-12-21 12:48:18" timestamp="  22.806810" verdicts="2_basic" measurementid="50db5c5a-b45e-43fc-998d-1eb18bddecc2">
+  <testcase starttime="2023-12-21 12:48:18" timestamp="  22.806810">
+    <teststep timestamp="  22.900132" level="1" type="auto" ident="Resume reason" result="na">Resumed on signal &apos;Signal:CAN1/Easy/EngineState/EngineSpeed&apos; Elapsed time=93.3221ms (max=2000ms)</teststep>
+    <teststep timestamp="  22.900132" level="0" type="user" ident="EngineSpeed" result="pass">signal and sysvar matched</teststep>
+    <verdict time="2023-12-21 12:48:18" timestamp="  22.900132" endtime="2023-12-21 12:48:18" endtimestamp="  22.900132" result="pass" />
     <title>EngineSpeedState</title>
   </testcase>
-  <verdict time="2023-12-18 16:49:01" timestamp="  10.900132" endtime="2023-12-18 16:49:01" endtimestamp="  10.900132" result="pass" />
+  <verdict time="2023-12-21 12:48:18" timestamp="  22.900132" endtime="2023-12-21 12:48:18" endtimestamp="  22.900132" result="pass" />
   <title>EngineStateSpeedTest</title>
   <testlogfiles>
   </testlogfiles>
@@ -39,7 +39,7 @@
     </xinfo>
     <xinfo>
       <name>Last modification of Test Module File</name>
-      <description>2023-12-18, 16:43:14</description>
+      <description>2023-12-21, 12:47:45</description>
     </xinfo>
     <xinfo>
       <name>Windows Computer Name</name>
@@ -55,4 +55,4 @@
     </xinfo>
   </testsetup>
 </testmodule>
-<!--footprint="143097fbec984a44517e42feb9ec0d50" version="1"-->
+<!--footprint="fd5b09d945d1d620f94eb40b93962718" version="1"-->

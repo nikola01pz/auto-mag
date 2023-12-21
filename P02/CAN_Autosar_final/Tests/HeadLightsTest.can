@@ -32,9 +32,9 @@ testcase HeadLightsOn()
 
 testcase HeadLightsOff()
 {
-  if($HeadLight== 1)
+  if($HeadLight== 0)
   {
-    temp = 4;
+    temp = 0;
   }
   if ((testWaitForSignalMatch(sysvar::Lights::LightDisplay, temp, 2000) == 1) && ($HeadLight == 0))
   {

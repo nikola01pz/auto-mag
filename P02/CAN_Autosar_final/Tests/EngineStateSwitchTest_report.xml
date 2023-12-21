@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<testmodule starttime="2023-12-18 16:48:57" timestamp="   6.370536" verdicts="2_basic" measurementid="a1ae3f62-2e6c-4a3e-942d-3c3d8c4addda">
-  <testcase starttime="2023-12-18 16:48:57" timestamp="   6.370536">
-    <teststep timestamp="   6.370536" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
-    <teststep timestamp="   6.370536" level="0" type="user" ident="EngineState" result="pass">engine on, values same</teststep>
-    <verdict time="2023-12-18 16:48:57" timestamp="   6.370536" endtime="2023-12-18 16:48:57" endtimestamp="   6.370536" result="pass" />
+<testmodule starttime="2023-12-21 12:48:09" timestamp="  13.564283" verdicts="2_basic" measurementid="50db5c5a-b45e-43fc-998d-1eb18bddecc2">
+  <testcase starttime="2023-12-21 12:48:09" timestamp="  13.564283">
+    <teststep timestamp="  13.564283" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+    <teststep timestamp="  13.564283" level="0" type="user" ident="EngineState" result="fail">failed</teststep>
+    <verdict time="2023-12-21 12:48:09" timestamp="  13.564283" endtime="2023-12-21 12:48:09" endtimestamp="  13.564283" result="fail" />
     <title>EngineSwitchOnState</title>
   </testcase>
-  <testcase starttime="2023-12-18 16:48:57" timestamp="   6.370536">
-    <teststep timestamp="   6.370536" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
-    <teststep timestamp="   6.370536" level="0" type="user" ident="EngineState" result="fail">failed</teststep>
-    <verdict time="2023-12-18 16:48:57" timestamp="   6.370536" endtime="2023-12-18 16:48:57" endtimestamp="   6.370536" result="fail" />
+  <testcase starttime="2023-12-21 12:48:09" timestamp="  13.564283">
+    <teststep timestamp="  13.564283" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+    <teststep timestamp="  13.564283" level="0" type="user" ident="EngineState" result="pass">engine off, values same</teststep>
+    <verdict time="2023-12-21 12:48:09" timestamp="  13.564283" endtime="2023-12-21 12:48:09" endtimestamp="  13.564283" result="pass" />
     <title>EngineSwitchOffState</title>
   </testcase>
-  <verdict time="2023-12-18 16:48:57" timestamp="   6.370536" endtime="2023-12-18 16:48:57" endtimestamp="   6.370536" result="fail" />
+  <verdict time="2023-12-21 12:48:09" timestamp="  13.564283" endtime="2023-12-21 12:48:09" endtimestamp="  13.564283" result="fail" />
   <title>EngineStateSwitchTest</title>
   <testlogfiles>
   </testlogfiles>
@@ -45,7 +45,7 @@
     </xinfo>
     <xinfo>
       <name>Last modification of Test Module File</name>
-      <description>2023-12-18, 16:43:15</description>
+      <description>2023-12-21, 12:47:43</description>
     </xinfo>
     <xinfo>
       <name>Windows Computer Name</name>
@@ -61,4 +61,4 @@
     </xinfo>
   </testsetup>
 </testmodule>
-<!--footprint="90248392de84db79eca87de95664f4c1" version="1"-->
+<!--footprint="99d2ab644baaea495eedb4790268fe28" version="1"-->
